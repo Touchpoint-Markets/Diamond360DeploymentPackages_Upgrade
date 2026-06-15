@@ -26,8 +26,7 @@
           DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Initial Catalog=master;Persist Security Info=True;Connect Timeout=30;Application Name=SSIS-MoveDiamond360_RawDataToQA-{F7647154-4904-40B8-81F5-9D465F2B0843}CINPSQL20\PROCESSING;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM+SZ2xAqXU6sPUumzUoOowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACTEPRoOKBUdg3AKb5u3DOIAAAAAASAAACgAAAAEAAAAH1lb/ZE4+MYz1Tvgo1lK/MYAAAAQyVw7PpNMD5L4qtI/V1YKKSP+M7NcW/RFAAAAFZp6JJ8gAo2JIeNoxnMjEXMxFYc</DTS:Password>
+            Sensitive="1" />
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -41,8 +40,7 @@
           DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Initial Catalog=Diamond360_RawData;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM+SZ2xAqXU6sPUumzUoOowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABD3mV+mJFxcaVk3Gf/loh7AAAAAASAAACgAAAAEAAAAC90l7Po8eyCNO3HbjhlTOQYAAAAP+3IliE/O9lyJyX0beLk0JrNODwJ1PdDFAAAANWWerssDKR6JlLMr4o1J+3uTX75</DTS:Password>
+            Sensitive="1" />
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -56,8 +54,7 @@
           DTS:ConnectionString="Data Source=10.9.57.8;User ID=jdauser;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM+SZ2xAqXU6sPUumzUoOowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABr607/sNxoFx27ur5WKCSxAAAAAASAAACgAAAAEAAAACGMebIYoQbTiHMnRNwevhoYAAAACJntce+8GGQW+O71cq64Tei9a6a2TZToFAAAABjWo0B6XyQn7PT2Rpybm5uLSqjX</DTS:Password>
+            Sensitive="1" />
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -71,8 +68,7 @@
           DTS:ConnectionString="Data Source=cinvsql24;User ID=jdauser;Initial Catalog=Diamond360;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM+SZ2xAqXU6sPUumzUoOowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABvfh553aJyQ9/c+d6e8XR7AAAAAASAAACgAAAAEAAAADGMWXwRtqoBfw2oXy4OmFIYAAAALAqA4N92TdN+i+2+9WTNBRTpb/aJYnPEFAAAAB0prNIFD753a0TwctKTlsvbFnlD</DTS:Password>
+            Sensitive="1" />
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DeployDataCycleDatabases"
   DTS:PackageType="5"
-  DTS:VersionBuild="142"
-  DTS:VersionGUID="{8C508B22-782F-4951-A90F-FE1B468F8E37}">
+  DTS:VersionBuild="147"
+  DTS:VersionGUID="{7635FD38-2632-4DDA-80D9-6347B08C9FC4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWCQlEQR6FUeLcXbaDsGx6QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAXQGghltntX0KAM8UnjX90mKGN7YoxoDxm3EyDAjuNWQAAAAAOgAAAAAIAACAAAACt25m1oKDeQ9HkyZugHMuPjVnqHUEHO/AUw8E9n1GJGSAAAAA2qLwWxJ+LYin3LJRjTjhFiytuFk7tYFMzwLroOmcpv0AAAAAFMVbfo4uUgvMZo6ASC/UMjxGEnA3ay4nif6NyUL8Z+3kX+v6mXWpdhRZoao/o8n5NLD6pYmqiJth2EEcd9NxM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACbS1KG/9fWSDsQlEfq2fjKxJjpo7kJKzwyvVh2o8k52AAAAAAOgAAAAAIAACAAAAA6pAd9+0uBeuJDy6gB2uyoUt9pzlGXATVrjIylxymhoSAAAAA8wnFzS/MvMVGADnBLbf9KyA2B/4Ah0uAX8vm/bHbjPUAAAACgVWwmpBtmzl2YqE6Zdrse8XsSRMXR5auIKjVP3kY2ypoo9TL2i847pzLeeRdCBIQQ49EAxoxcCL3Ov6KfccUG</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWCQlEQR6FUeLcXbaDsGx6QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADId6dxAFI7SXyKPapFZUtP60aPFoYDAvpcJhGUGO0H+AAAAAAOgAAAAAIAACAAAABy+PR2AhXueCLIdbngJ6d8k9cPqlM7NcKRoKxuNkzZgCAAAAANHAlUVJzbKB/HvWX/8WWOfcy+HJJ2VJ4obF/0Eqnjh0AAAACasYUASl5mIBET9N2aHppIJ+CgXNRe0hVsfRU75PWXTQDw45RyWdWDxZp388yaOH5MHmG/aMIzmMA626/rlIoY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACFtZuKvcMRWE9V1xsOV09d6mtVe2tRg2voH7N5B4WwvwAAAAAOgAAAAAIAACAAAABcQfxki6JZ+3rtLlWzBRxbwg9ENuycC3o3eK/FjLdo+yAAAAAV3OfySY17ncXKqt18vPX1Moq47x7AN8C1wEz/UvV3RkAAAAA+0JASAPgOSnXjuLGRnIuTFU7F7S/gNy48WwDOQfC45Bgz7S6zy4gvwiQSf6T8KWQk99l2A1fIxL8l6Bo3dFyR</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -329,7 +329,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A28F843-5278-4C1F-8C4B-8F07991906F5}"
-          SQLTask:SqlStatementSource="EXEC dbo.EINFinder_MOVEQA_GIBASIC;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFinder_MOVEQA_GIPROPRIETARY;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFINDER_MOVEQA_GISCHEDULES;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFINDER_MOVEQA_RPPBASIC;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFINDER_MOVEQA_RPPPROPRIETARY;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFINDER_MOVEQA_RPPSCHEDULES;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="Use Diamond360;&#xA;&#xA;EXEC dbo.EINFinder_MOVEQA_GIBASIC;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFinder_MOVEQA_GIPROPRIETARY;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFINDER_MOVEQA_GISCHEDULES;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFINDER_MOVEQA_RPPBASIC;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFINDER_MOVEQA_RPPPROPRIETARY;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFINDER_MOVEQA_RPPSCHEDULES;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -405,6 +405,15 @@
               VSTAMinorVersion="0"
               Language="CSharp"
               ReadOnlyVariables="System::PackageName, System::SourceName, System::SourceDescription, System::ErrorDescription, System::ErrorCode">
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -611,35 +620,6 @@
   </ProjectExtensions>
 </Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties.Settings.get_Default():ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties.Sett" +
-    "ings")]
-
-namespace ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Namespaces
 using System;
@@ -723,6 +703,35 @@ namespace ST_d1dcc50421ce46b99a9df5840ebc69a9
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties.Settings.get_Default():ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties.Sett" +
+    "ings")]
+
+namespace ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -752,15 +761,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -994,10 +994,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="195.2,41.6"
-          Id="Package\Load EINFinder API Data"
-          TopLeft="427.9,622.3" />
-        <NodeLayout
-          Size="195.2,41.6"
           Id="Package\Deployment Container\FreeERISA Databases\Diamond360_RawData\Deploy to Live (As _New)"
           TopLeft="5.50000000000001,107.1" />
         <NodeLayout
@@ -1166,31 +1162,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Deployment Container"
           TopLeft="5.5,5.50000000000003" />
         <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\Load EINFinder API Data"
+          TopLeft="427.9,622.3" />
+        <NodeLayout
           Size="200,41.6"
           Id="Package\SET TRUSTWORTHY QA"
           TopLeft="425.5,520.7" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="525.5,562.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="525.5,460.7">
@@ -1205,6 +1183,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="525.5,562.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

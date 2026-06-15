@@ -1,78 +1,33 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/14/2013 7:04:13 PM"
-  DTS:CreationName="SSIS.Package.3"
+  DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="CINPSQL20"
   DTS:CreatorName="SBMEDIA\tdudley"
   DTS:DTSID="{4A96AA1E-8B44-43CE-97A3-402263A88574}"
-  DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.7001.0"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="MoveGroupInsuranceExportsToQA"
   DTS:PackageType="5"
-  DTS:VersionBuild="149"
-  DTS:VersionGUID="{057D96B9-88DD-4CCE-9E26-72742A98BC41}">
+  DTS:VersionBuild="154"
+  DTS:VersionGUID="{35D58ED6-C28E-4CD9-BBED-7237B920854D}">
   <DTS:Property
-    DTS:Name="PackageFormatVersion">6</DTS:Property>
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[cinpsql20.sbmedia.com\Processing]"
-      DTS:CreationName="ADO.NET:SQL"
-      DTS:DTSID="{40A295D9-694F-4692-B5A9-C0389F7B2281}"
-      DTS:ObjectName="cinpsql20.sbmedia.com\Processing">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Persist Security Info=True;Connect Timeout=30;Application Name=SSIS-MoveGroupInsuranceExportsToQA-{40A295D9-694F-4692-B5A9-C0389F7B2281}cinpsql20.sbmedia.com\Processing;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM+SZ2xAqXU6sPUumzUoOowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADeXkqRapUvTVA5DHF93xKoAAAAAASAAACgAAAAEAAAABSnoZmY/rIZ3GpQOenKT6IYAAAANk+JFJSs0PistAl5FIR7Lu/u0zuL67XXFAAAAIRHcsEM92GIAg9cvXSVjGv48ZQ9</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[CINPSQL20\PROCESSING]"
       DTS:CreationName="ADO.NET:SQL"
-      DTS:DTSID="{13491289-B6FE-435F-8396-5A77BE34DE85}"
+      DTS:DTSID="{A21CE2C4-5B07-4E02-8060-C542113013D2}"
       DTS:ObjectName="CINPSQL20\PROCESSING">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Persist Security Info=True;Connect Timeout=30;Application Name=SSIS-MoveGroupInsuranceExportsToQA-{13491289-B6FE-435F-8396-5A77BE34DE85}CINPSQL22;">
+          DTS:ConnectionString="Data Source=10.9.60.43\processing;User ID=jdauser;Initial Catalog=;Integrated Security=False;Pooling=True;Min Pool Size=0;Max Pool Size=100;Connect Timeout=15;Encrypt=True;TrustServerCertificate=True;Packet Size=8000;Type System Version=Latest;Authentication=&quot;Sql Password&quot;;Application Name=&quot;Framework Microsoft SqlClient Data Provider&quot;;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM+SZ2xAqXU6sPUumzUoOowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACjw6jw6hVqGxz6UZEAolsFAAAAAASAAACgAAAAEAAAAPB5f11yH53OY4vpqVcQDXUYAAAABajgDR2FdHyFTecFTS18Mcg9EaDRYvFmFAAAAI3Iu16l+QV2MPFSBLJDmPFuhEKY</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINPSQL20\PROCESSING.GroupInsuranceExports]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{87F5B3CB-092A-4F9E-9BAC-A41FC33E78B6}"
-      DTS:ObjectName="CINPSQL20\PROCESSING.GroupInsuranceExports">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Initial Catalog=GroupInsuranceExports;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM+SZ2xAqXU6sPUumzUoOowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAKnmpGXe5axUaLU5lETUAcAAAAAASAAACgAAAAEAAAAHuMx0edUiCfz8k8Ex5+0zAYAAAAVxv2NydAPuivj4zQoBk0A7RfCVjAKtdnFAAAAJU8KeULazWp5H++ZS6oDKN+rSfT</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINVSQL24]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{3DFC580F-1798-4301-A889-2DE4C1C240FA}"
-      DTS:ObjectName="CINVSQL24">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=CINVSQL24;User ID=jdauser;Initial Catalog=GroupInsuranceExports;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM+SZ2xAqXU6sPUumzUoOowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABZyQrw21HrvCDcW4tyoys6AAAAAASAAACgAAAAEAAAAEX3InxhiBHZo/FG+ZL+WH0YAAAANZFLSZOvCNExWoEbNHBUMA7R9nKdjKydFAAAANeStQQLlFvBlgoPCmZGoQUziOwG</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADYw+5izE37qLjfOerZvkipV+BdWrRICOLUo/+zTxSN3QAAAAAOgAAAAAIAACAAAACNqL22hrf+cP94Oack+hOmocXZzuvvr3kb8tWcIz5ZFyAAAABgqh/O1FpK/BDOEcOO3RvFe12WJE7k6PVtQvnTMJNYnUAAAACCt2G9o5gQQWy39wlZQVIP8Hu2LZVj3bcicz/dutHDt9bT02fk211AJsL9ePhuuUxoEFJe/kZdv1nF00+nAmL/</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -158,10 +113,10 @@
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Create New Backups\Backup GroupInsuranceExports"
-          DTS:CreationName="Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceTSQLExecuteTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
           DTS:Description="Execute T-SQL Statement Task"
           DTS:DTSID="{29C3A33F-9AAB-49D7-8F2D-4EFEF97F7C14}"
-          DTS:ExecutableType="Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceTSQLExecuteTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Backup GroupInsuranceExports"
           DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -169,7 +124,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{40A295D9-694F-4692-B5A9-C0389F7B2281}"
+              SQLTask:Connection="{A21CE2C4-5B07-4E02-8060-C542113013D2}"
               SQLTask:SqlStatementSource="BACKUP DATABASE GroupInsuranceExports&#xA;    TO DISK = '\\SUNVWIN360DB02\amc\D360Backups\GroupInsuranceExports.bak'&#xA;WITH COMPRESSION"
               SQLTask:ServerVersion="9"
               SQLTask:ExtendedLogging="True"
@@ -180,10 +135,10 @@
         </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Create New Backups\Database Optimization"
-          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{0E887F93-D8A9-4E05-9DDB-0352C9728529}"
-          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Database Optimization"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -197,10 +152,10 @@
         </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Create New Backups\Shrink Files"
-          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{89E0AE24-4ACD-4875-97B6-58E4FA9C1B61}"
-          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Shrink Files"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -208,8 +163,8 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{87F5B3CB-092A-4F9E-9BAC-A41FC33E78B6}"
-              SQLTask:SqlStatementSource="DBCC SHRINKFILE (N'GroupInsuranceExports' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'GroupInsuranceExports' , 0, TRUNCATEONLY)&#xA;GO&#xA;&#xA;DBCC SHRINKFILE (N'GroupInsuranceExports_log' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'GroupInsuranceExports_log' , 0, TRUNCATEONLY)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:Connection="{EB5CF017-7B2D-4036-9DCF-D17FA04D16E9}"
+              SQLTask:SqlStatementSource="use GroupInsuranceExports;&#xA;DBCC SHRINKFILE (N'GroupInsuranceExports' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'GroupInsuranceExports' , 0, TRUNCATEONLY)&#xA;GO&#xA;&#xA;DBCC SHRINKFILE (N'GroupInsuranceExports_log' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'GroupInsuranceExports_log' , 0, TRUNCATEONLY)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -234,10 +189,10 @@
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Delete Old GroupInsuranceExports Backup"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:CreationName="Microsoft.FileSystemTask"
       DTS:Description="File System Task"
       DTS:DTSID="{893C2239-6367-4B69-AF20-9698B3401E28}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Delete Old GroupInsuranceExports Backup"
       DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -251,10 +206,10 @@
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Get Current Date Time To Tack Onto End Of MDF And LDF Files"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
       DTS:DTSID="{17990301-A9F4-4909-BA16-DB015107B4BB}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Current Date Time To Tack Onto End Of MDF And LDF Files"
       DTS:ThreadHint="0">
@@ -262,40 +217,10 @@
       <DTS:ObjectData>
         <ScriptProject
           Name="ST_32975033dfce48a1b108b37671d69815"
-          VSTAMajorVersion="3"
+          VSTAMajorVersion="17"
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadWriteVariables="User::ExportsFileName">
-          <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -416,6 +341,35 @@ using System.Runtime.CompilerServices;
   </resheader>
 </root>]]></ProjectItem>
           <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_32975033dfce48a1b108b37671d69815.Properties.Settings.get_Default():ST_32975033dfce48a1b108b37671d69815.Properties.Sett" +
+    "ings")]
+
+namespace ST_32975033dfce48a1b108b37671d69815.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
             Name="ST_32975033dfce48a1b108b37671d69815.csproj"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -430,8 +384,10 @@ using System.Runtime.CompilerServices;
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ST_32975033dfce48a1b108b37671d69815</RootNamespace>
     <AssemblyName>ST_32975033dfce48a1b108b37671d69815</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -457,8 +413,8 @@ using System.Runtime.CompilerServices;
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
@@ -493,7 +449,7 @@ using System.Runtime.CompilerServices;
         <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" />
         <Host Name="ScriptTask" />
         <ProjectClient>
-          <HostIdentifier>SSIS_ST110</HostIdentifier>
+          <HostIdentifier>SSIS_ST170</HostIdentifier>
         </ProjectClient>
       </FlavorProperties>
     </VisualStudio>
@@ -618,52 +574,53 @@ namespace ST_32975033dfce48a1b108b37671d69815
           <ProjectItem
             Name="Project"
             Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:CodeName>ST_32975033dfce48a1b108b37671d69815</msb:CodeName>
-		<msb:DisplayName>ST_32975033dfce48a1b108b37671d69815</msb:DisplayName>
-		<msb:ProjectId>{F097732E-2548-488B-B41A-A8A534EA9393}</msb:ProjectId>
-		<msb:Language>msBuild</msb:Language>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_32975033dfce48a1b108b37671d69815.csproj"/>
-		<msb:File Include="Properties\AssemblyInfo.cs"/>
-		<msb:File Include="Properties\Resources.resx"/>
-		<msb:File Include="Properties\Settings.Designer.cs"/>
-		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="Properties\Settings.settings"/>
-		<msb:File Include="ScriptMain.cs"/>
-	</msb:ItemGroup>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_32975033dfce48a1b108b37671d69815</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_32975033dfce48a1b108b37671d69815</msb:DisplayName>
+    <msb:ProjectId>{1266CE2C-7413-4CBD-85CC-00790F988A58}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_32975033dfce48a1b108b37671d69815.csproj" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_32975033dfce48a1b108b37671d69815.Properties.Settings.get_Default():ST_32975033dfce48a1b108b37671d69815.Properties.Sett" +
-    "ings")]
-
-namespace ST_32975033dfce48a1b108b37671d69815.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Settings.settings"
             Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -744,112 +701,112 @@ namespace ST_32975033dfce48a1b108b37671d69815.Properties {
           <BinaryItem
             Name="ST_32975033dfce48a1b108b37671d69815.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAN1xr1IAAAAAAAAAAOAAAiELAQsAABAAAAAIAAAAAAAAri8A
-AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAFQvAABXAAAAAEAAAAgEAAAAAAAAAAAAAAAAAAAA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJzSL2oAAAAAAAAAAOAAIiALATAAABAAAAAIAAAAAAAALi8A
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANwuAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAtA8AAAAgAAAAEAAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAAgEAAAAQAAAAAYAAAASAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAGAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACQ
-LwAAAAAAAEgAAAACAAUAYCIAAPQMAAABAAAAAAAAAKghAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKA4AAAoqEzACAC0AAAABAAARfgEAAAQtIHIBAABw0AIA
-AAIoDwAACm8QAAAKcxEAAAoKBoABAAAEfgEAAAQqGn4CAAAEKh4CgAIAAAQqGn4DAAAEKi5zBgAA
-BoADAAAEKh4CKBQAAAoqABMwBQDSAAAAAgAAEQIoFgAACm8XAAAKcnMAAHBvGAAACnKTAABwHI0B
-AAABCgYWKBkAAAoLEgEoGgAACgwSAigbAAAKogYXKBkAAAoNEgMoHAAAChMEEgQoGwAACqIGGCgZ
-AAAKEwUSBSgdAAAKEwYSBigbAAAKogYZKBkAAAoTBxIHKB4AAAoTCBIIKBsAAAqiBhooGQAAChMJ
-EgkoHwAAChMKEgooGwAACqIGGygZAAAKEwsSCyggAAAKEwwSDCgbAAAKogYoIQAACm8iAAAKAigW
-AAAKFm8jAAAKKh4CKCQAAAoqAAAAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2Vz
-LlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRy
-YWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50
-aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAEJTSkIBAAEAAAAAAAwAAAB2NC4w
-LjMwMzE5AAAAAAUAbAAAAAAEAAAjfgAAbAQAAAwGAAAjU3RyaW5ncwAAAAB4CgAA6AAAACNVUwBg
-CwAAEAAAACNHVUlEAAAAcAsAAIQBAAAjQmxvYgAAAAAAAAACAAABVx2iAQkDAAAA+iUzABYAAAEA
-AAAgAAAABQAAAAYAAAAJAAAAAQAAACQAAAACAAAADwAAAAIAAAACAAAAAwAAAAQAAAABAAAABAAA
-AAEAAAABAAAAAAAKAAEAAAAAAAYAwQC6AAoA3QDIAA4APQEUAQYAWQG6AAYAbwFeAQYAoAGLAQYA
-VwI9AgYAggJwAgYAmQJwAgYAtgJwAgYA1QJwAgYA7gJwAgYABwNwAgYAIgNwAgYAPQNwAgYAVgNw
-AgYAjwNvAwYArwNvAwYA4APNAwYA/QO6AAYAAgS6AAYAJgRwAgoAUgQ8BAoAawQ8BAYAgARvAw4A
-ogQUAQ4AxAQUARIAHQX9BBIANQX9BAYARwW6AAYAYgW6AAYAoQW6AAAAAAABAAAAAAABAAEAAAAQ
-ADIAPAAFAAEAAQAAARAAawA8AAkAAwAFAAEAEAB0AH8ADQAEAAgAAwEAAKMAAAARAAQACgARAH8B
-EwARAKwBFwARAPYBOQAGBh8CRwBWgCcCSgBWgC8CSgBQIAAAAACDGLwBGwABAFggAAAAAJMIwgEf
-AAEAkSAAAAAAkwjWASQAAQCYIAAAAACTCOIBKQABAKAgAAAAAJYIBgI9AAIAsyAAAAAAhhi8ARsA
-AgCnIAAAAACRGJsEiQACALwgAAAAAIYAGgIbAAIAmiEAAAAAhhi8ARsAAgAAAAEANwI5ALwBWABB
-ALwBWABJALwBWABRALwBWABZALwBWABhALwBWABpALwBWABxALwBWAB5ALwBWACBALwBWACJALwB
-XQCRALwBGwCZALwBGwAJALwBGwChABQEYgChAC8EaQApALwBbgC5ALwBegDJALwBGwARALwBGwDR
-ALwBGwAZANYEjQDZACcFkgDhAD4FlwDxAFAFnQDxAFgFogD5AGgFpgDxAHEFogDxAHkFogDxAIIF
-ogDxAIsFogDxAJYFogABAagFqgDpAK8FsQDZALkFXQAZALwBGwAIABQATgAIABgAUwApAJMAgAAu
-ABsAPgEuACMAPgEuAGMAZAEuAAsAzQAuABMAFQEuADMAFQEuACsAPgEuADsARAEuAEMAPgEuAFsA
-WwFDAGsAUwBJAJMAgABhAJsAUwCDAKsAUwB1ALYAAgABAAMAAwAAAG8BLwAAAO4BNAAAABICQgAC
-AAIAAwACAAMABQABAAQABQACAAUABwAEgAAAAQAAAOoTfm0AAAAAAAB/AAAABAAAAAAAAAAAAAAA
-AQCxAAAAAAAEAAAAAAAAAAAAAAABALoAAAAAAAsAAAAAAAAAAAAAAAoA9QAAAAAACwAAAAAAAAAA
-AAAACgDeBAAAAAAAAAAAAQAAAMgFAAAFAAQAAAAAPE1vZHVsZT4AU1RfMzI5NzUwMzNkZmNlNDhh
-MWIxMDhiMzc2NzFkNjk4MTUuZGxsAFJlc291cmNlcwBTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIz
-NzY3MWQ2OTgxNS5Qcm9wZXJ0aWVzAFNldHRpbmdzAFNjcmlwdE1haW4AU1RfMzI5NzUwMzNkZmNl
-NDhhMWIxMDhiMzc2NzFkNjk4MTUAU2NyaXB0UmVzdWx0cwBtc2NvcmxpYgBTeXN0ZW0AT2JqZWN0
-AFN5c3RlbS5Db25maWd1cmF0aW9uAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAE1pY3Jvc29mdC5T
-cWxTZXJ2ZXIuU2NyaXB0VGFzawBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5UYXNrcy5TY3JpcHRU
-YXNrAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFzZQBFbnVtAFN5c3RlbS5SZXNvdXJjZXMAUmVz
-b3VyY2VNYW5hZ2VyAHJlc291cmNlTWFuAFN5c3RlbS5HbG9iYWxpemF0aW9uAEN1bHR1cmVJbmZv
-AHJlc291cmNlQ3VsdHVyZQAuY3RvcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAGdldF9DdWx0dXJlAHNl
-dF9DdWx0dXJlAEN1bHR1cmUAZGVmYXVsdEluc3RhbmNlAGdldF9EZWZhdWx0AERlZmF1bHQATWFp
-bgB2YWx1ZV9fAFN1Y2Nlc3MARmFpbHVyZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5n
-AFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBTeXN0ZW0uUmVmbGVjdGlvbgBBc3NlbWJseVRpdGxl
-QXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0
-aW9uQXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRy
-aWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1
-dGUAQXNzZW1ibHlDdWx0dXJlQXR0cmlidXRlAEFzc2VtYmx5VmVyc2lvbkF0dHJpYnV0ZQBTeXN0
-ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1
-dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAU3lzdGVtLkRpYWdub3N0aWNzAERlYnVn
-Z2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUAVHlwZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJv
-bUhhbmRsZQBBc3NlbWJseQBnZXRfQXNzZW1ibHkAU3lzdGVtLkNvbXBvbmVudE1vZGVsAEVkaXRv
-ckJyb3dzYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRl
-ZEF0dHJpYnV0ZQAuY2N0b3IAU1NJU1NjcmlwdFRhc2tFbnRyeVBvaW50QXR0cmlidXRlAFNjcmlw
-dE9iamVjdE1vZGVsAGdldF9EdHMATWljcm9zb2Z0LlNxbFNlcnZlci5NYW5hZ2VkRFRTAE1pY3Jv
-c29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAVmFyaWFibGVzAGdldF9WYXJpYWJsZXMAVmFyaWFi
-bGUAZ2V0X0l0ZW0ARGF0ZVRpbWUAZ2V0X05vdwBnZXRfTW9udGgASW50MzIAVG9TdHJpbmcAZ2V0
-X0RheQBnZXRfWWVhcgBnZXRfSG91cgBnZXRfTWludXRlAGdldF9TZWNvbmQAU3RyaW5nAEZvcm1h
-dABzZXRfVmFsdWUAc2V0X1Rhc2tSZXN1bHQAU1RfMzI5NzUwMzNkZmNlNDhhMWIxMDhiMzc2NzFk
-Njk4MTUuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAAAAcVMAVABfADMAMgA5ADcANQAw
-ADMAMwBkAGYAYwBlADQAOABhADEAYgAxADAAOABiADMANwA2ADcAMQBkADYAOQA4ADEANQAuAFAA
-cgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAH0UAeABwAG8AcgB0AHMARgBp
-AGwAZQBOAGEAbQBlAABTUAByAG8AcwBwAGUAYwB0AG8AcgBFAHgAcABvAHIAdABzAF8AewAwAH0A
-XwB7ADEAfQBfAHsAMgB9AF8AewAzAH0AXwB7ADQAfQBfAHsANQB9AAAAL8WXmVwNqEaVZ/a8cPs2
-QwAIt3pcVhk04IkIiYRdzYCAzJEDBhIVAwYSGQMgAAEEAAASFQQAABIZBQABARIZBAgAEhUECAAS
-GQMGEgwEAAASDAQIABIMAgYIAwYRFAQAAAAABAEAAAAEIAEBDgQgAQEIBgABElERVQQgABJZBiAC
-AQ4SWQQHARIVBSABARFhCAEAAgAAAAAAAwAAAQQgABJtBCAAEnEFIAESdRwEAAAReQMgAAgDIAAO
-BgACDg4dHAQgAQEcFgcNHRwReQgReQgReQgReQgReQgReQhHAQAaLk5FVEZyYW1ld29yayxWZXJz
-aW9uPXY0LjABAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEC5ORVQgRnJhbWV3b3JrIDQoAQAjU1Rf
-MzI5NzUwMzNkZmNlNDhhMWIxMDhiMzc2NzFkNjk4MTUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAg
-MjAxMwAACAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQB8LwAAAAAAAAAA
-AACeLwAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkC8AAAAAAAAAAAAAAAAAAAAAAAAAAF9Db3JE
-bGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAANA8AAAAgAAAAEAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAASAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAGAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAQ
+LwAAAAAAAEgAAAACAAUAjCEAAJgMAAABAAAAAAAAACQuAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwBgDHAAAAAQAAEQIoEAAACm8RAAAKcgEAAHBvEgAACnIh
+AABwHI0SAAABJRYoEwAACgoSACgUAAAKCxIBKBUAAAqiJRcoEwAACgoSACgWAAAKCxIBKBUAAAqi
+JRgoEwAACgoSACgXAAAKCxIBKBUAAAqiJRkoEwAACgoSACgYAAAKCxIBKBUAAAqiJRooEwAACgoS
+ACgZAAAKCxIBKBUAAAqiJRsoEwAACgoSACgaAAAKCxIBKBUAAAqiKBsAAApvHAAACgIoEAAAChZv
+HQAACioeAigeAAAKKh4CKB8AAAoqrn4BAAAELR5yfQAAcNADAAACKCAAAApvIQAACnMiAAAKgAEA
+AAR+AQAABCoafgIAAAQqHgKAAgAABCoafgMAAAQqHgIoIwAACioucwgAAAaAAwAABCoAAABCU0pC
+AQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAAABAAAI34AAGwEAAC0BQAAI1N0cmluZ3MA
+AAAAIAoAAPAAAAAjVVMAEAsAABAAAAAjR1VJRAAAACALAAB4AQAAI0Jsb2IAAAAAAAAAAgAAAVcd
+ogEJAwAAAPoBMwAWAAABAAAAIAAAAAUAAAAGAAAACQAAAAEAAAAjAAAAAgAAABAAAAABAAAAAgAA
+AAMAAAAEAAAAAQAAAAQAAAABAAAAAQAAAAAApAMBAAAAAAAGAD8ChgQGAM4ChgQGAIsBcwQPAPoE
+AAAGALgBIgQGACICIgQGAAMCIgQGALUCIgQGAF8CIgQGAHgCIgQGAM8BIgQGAOoBBwMKAJMCUwMK
+AAoBUwMGAKwA1QMGANwD1QMGAG4BcwQGAHQF1QMGAE0EpgQGADQEDQQOAD4BjgMOAJ8BjgMOACYB
++AMGAFMBhgQKAHwDUwMSADwFtQASAH8AtQAGAAEA1QMGACMD1QMGANUA1QMGAIgA1QMGAKoFIgQA
+AAAAKwAAAAAAAQABAAEAEADtAwcAOQABAAEAAAAQAK0ECQVJAAEAAwAAARAARgUJBV0AAwAHAAMB
+AABfBQAAQQAEAAoAEQDhA3sAEQD6AH8AEQBvAIMABgZTAIcAVoBPBYoAVoDaAIoAUCAAAAAAhgDz
+AwYAAQAjIQAAAACGGF0EBgABACshAAAAAIMYXQQGAAEAMyEAAAAAkwhJBI4AAQBfIQAAAACTCOIA
+kwABAGYhAAAAAJMI7gCYAAEAbiEAAAAAlgh7BZ4AAgB1IQAAAACGGF0EBgACAH0hAAAAAJEYYwSj
+AAIAAAABAAEDCQBdBAEAEQBdBAYAGQBdBAoAKQBdBBAAMQBdBBAAOQBdBBAAQQBdBBAASQBdBBAA
+UQBdBBAAWQBdBBAAYQBdBBAAaQBdBAYAiQBdBAYAsQBdBBUAwQBdBAYAcQBXBSEAyQA4BSYA0QDM
+AysAeQCWBTEAeQAqAzYA4QAhAzoAeQCeBTYAeQBABDYAeQBqBDYAeQDsAjYAeQBkADYA6QBtBT4A
+2QD3AkUAyQCHBQEAcQBdBAYAkQBdBAYA8QCaAEoA8QCmBVEAmQBdBFcAuQBdBAYACAAUAHEACAAY
+AHYAKQBzAN4ALgALALYALgATAL8ALgAbAN4ALgAjAOcALgArABABLgAzABABLgA7ABABLgBDAOcA
+LgBLABYBLgBTABABLgBbAC0BQwBjAHYASQBzAN4AYQB7AHYAYwBrAHYAGwADAAEABAADAAAATQSn
+AAAAAgGsAAAAfwWxAAIABAADAAIABQAFAAEABgAFAAIABwAHAASAAAABAAAAviW6bwAAAAAAAAcA
+AAAEAAAAAAAAAAAAAABfAFsAAAAAABEAAAAAAAAAAAAAAGgANAMAAAAABAAAAAAAAAAAAAAAXwDV
+AwAAAAARAAAAAAAAAAAAAABoADQAAAAAAAAAAAABAAAAtwQAAAUAAgAAAAAAAEludDMyAFNUXzMy
+OTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1ADxNb2R1bGU+AE1pY3Jvc29mdC5TcWxTZXJ2
+ZXIuTWFuYWdlZERUUwB2YWx1ZV9fAG1zY29ybGliAGdldF9TZWNvbmQAZGVmYXVsdEluc3RhbmNl
+AFZhcmlhYmxlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAERhdGVUaW1lAE1p
+Y3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAVHlwZQBGYWlsdXJlAGdldF9DdWx0dXJlAHNl
+dF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UAQXBw
+bGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0
+ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmli
+dXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2Vt
+Ymx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNv
+bmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxh
+dGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJs
+eUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0VGFza0VudHJ5UG9pbnRBdHRyaWJ1dGUAQXNz
+ZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAGdldF9N
+aW51dGUAc2V0X1ZhbHVlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAVG9TdHJpbmcA
+Z2V0X01vbnRoAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuU2NyaXB0VGFzawBNaWNyb3NvZnQuU3FsU2Vy
+dmVyLkR0cy5UYXNrcy5TY3JpcHRUYXNrAFNjcmlwdE9iamVjdE1vZGVsAFN5c3RlbS5Db21wb25l
+bnRNb2RlbABTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgxNS5kbGwAZ2V0X0l0ZW0A
+U3lzdGVtAEVudW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBT
+eXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBDdWx0dXJlSW5mbwBnZXRfWWVh
+cgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBnZXRfSG91cgBTeXN0ZW0uRGlhZ25v
+c3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNU
+XzMyOTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1LlByb3BlcnRpZXMuUmVzb3VyY2VzLnJl
+c291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgx
+NS5Qcm9wZXJ0aWVzAGdldF9WYXJpYWJsZXMAU2V0dGluZ3MAU3VjY2VzcwBnZXRfRHRzAFNjcmlw
+dFJlc3VsdHMARm9ybWF0AE9iamVjdABnZXRfRGVmYXVsdABzZXRfVGFza1Jlc3VsdABnZXRfTm93
+AGdldF9EYXkAZ2V0X0Fzc2VtYmx5AAAAH0UAeABwAG8AcgB0AHMARgBpAGwAZQBOAGEAbQBlAABb
+RwByAG8AdQBwAEkAbgBzAHUAcgBhAG4AYwBlAEUAeABwAG8AcgB0AHMAXwB7ADAAfQBfAHsAMQB9
+AF8AewAyAH0AXwB7ADMAfQBfAHsANAB9AF8AewA1AH0AAHFTAFQAXwAzADIAOQA3ADUAMAAzADMA
+ZABmAGMAZQA0ADgAYQAxAGIAMQAwADgAYgAzADcANgA3ADEAZAA2ADkAOAAxADUALgBQAHIAbwBw
+AGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAIBFUdkN0SQ5NN4Cpp6LX2AAQgAQEI
+AyAAAQUgAQEREQQgAQEOBSABARFVBQcCET0IBCAAEmUEIAASaQUgARJtHAQAABE9AyAACAMgAA4G
+AAIODh0cBCABARwGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEEAAAAAAQB
+AAAAAwYSTQMGElEDBhIQAgYIAwYRFAQAABJNBAAAElEFAAEBElEEAAASEAMAAAEECAASTQQIABJR
+BAgAEhAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEA
+I1NUXzMyOTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1AAAFAQAAAAAWAQARQ29weXJpZ2h0
+IEAgIDIwMTMAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlz
+cGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43ALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291
+cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMu
+UnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAAAELwAAAAAAAAAAAAAeLwAA
+ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEC8AAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVl
+LmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAA
-AABIAAAAWEAAALADAAAAAAAAAAAAALADNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBP
-AAAAAAC9BO/+AAABAAAAAQB+beoTAAABAH5t6hM/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
+AABIAAAAWEAAABoEAAAAAAAAAAAAABoENAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBP
+AAAAAAC9BO/+AAABAAAAAQC6b74lAAABALpvviU/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
 RAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBv
-AG4AAAAAAAAAsAQQAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAADsAgAAAQAwADAA
-MAAwADAANABiADAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBU
-AF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3ADYANwAxAGQA
-NgA5ADgAMQA1AAAAQAAPAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADUAMAA5
-ADgALgAyADgAMAAzADAAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBUAF8A
-MwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3ADYANwAxAGQANgA5
-ADgAMQA1AC4AZABsAGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8A
-cAB5AHIAaQBnAGgAdAAgAEAAIAAgADIAMAAxADMAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBp
-AGwAZQBuAGEAbQBlAAAAUwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEA
-MAA4AGIAMwA3ADYANwAxAGQANgA5ADgAMQA1AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0
-AE4AYQBtAGUAAAAAAFMAVABfADMAMgA5ADcANQAwADMAMwBkAGYAYwBlADQAOABhADEAYgAxADAA
-OABiADMANwA2ADcAMQBkADYAOQA4ADEANQAAAEQADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBp
-AG8AbgAAADEALgAwAC4ANQAwADkAOAAuADIAOAAwADMAMAAAAAAASAAPAAEAQQBzAHMAZQBtAGIA
-bAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4ANQAwADkAOAAuADIAOAAwADMAMAAAAAAAAAAA
+AG4AAAAAAAAAsAR6AwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAABWAwAAAQAwADAA
+MAAwADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABh
+AG4AeQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4A
+AAAAAFMAVABfADMAMgA5ADcANQAwADMAMwBkAGYAYwBlADQAOABhADEAYgAxADAAOABiADMANwA2
+ADcAMQBkADYAOQA4ADEANQAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAA
+LgA5ADYANgAyAC4AMgA4ADYAMAAyAAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAA
+AFMAVABfADMAMgA5ADcANQAwADMAMwBkAGYAYwBlADQAOABhADEAYgAxADAAOABiADMANwA2ADcA
+MQBkADYAOQA4ADEANQAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0
+AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAAIAAyADAAMQAzAAAAKgABAAEATABlAGcAYQBsAFQA
+cgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBu
+AGEAbQBlAAAAUwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIA
+MwA3ADYANwAxAGQANgA5ADgAMQA1AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBt
+AGUAAAAAAFMAVABfADMAMgA5ADcANQAwADMAMwBkAGYAYwBlADQAOABhADEAYgAxADAAOABiADMA
+NwA2ADcAMQBkADYAOQA4ADEANQAAAEIADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAA
+ADEALgAwAC4AOQA2ADYAMgAuADIAOAA2ADAAMgAAAAAARgAPAAEAQQBzAHMAZQBtAGIAbAB5ACAA
+VgBlAHIAcwBpAG8AbgAAADEALgAwAC4AOQA2ADYAMgAuADIAOAA2ADAAMgAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAACwPwAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAAAwPwAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -874,10 +831,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Restore Backups\Restore GroupInsuranceExports On QA"
-          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{0F1865C9-F1BE-4A98-86B2-63AC76BFF90D}"
-          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Restore GroupInsuranceExports On QA"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -898,7 +855,7 @@ ALTER DATABASE GroupInsuranceExports SET MULTI_USER
 GO"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{3DFC580F-1798-4301-A889-2DE4C1C240FA}"
+              SQLTask:Connection="{6A28F843-5278-4C1F-8C4B-8F07991906F5}"
               SQLTask:SqlStatementSource="Use master&#xA;Go&#xA;ALTER DATABASE GroupInsuranceExports SET SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;&#xA;RESTORE DATABASE GroupInsuranceExports&#xA;FROM DISK = '\\SUNVWIN360DB02\amc\D360Backups\GroupInsuranceExports.bak' &#xA;WITH FILE = 1, MOVE 'GroupInsuranceExports' TO 'E:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL\Data\.mdf',&#xA;MOVE 'GroupInsuranceExports_Log' TO 'F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL\Data\.ldf' ,&#xA;NOUNLOAD, REPLACE&#xA;&#xA;ALTER DATABASE GroupInsuranceExports SET MULTI_USER&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -936,7 +893,7 @@ GO"</DTS:PropertyExpression>
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="sql11">
+  Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
@@ -944,31 +901,31 @@ GO"</DTS:PropertyExpression>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="227,42"
+          Size="227.2,41.6"
           Id="Package\Create New Backups\Backup GroupInsuranceExports"
-          TopLeft="5.50000000000003,209.5" />
+          TopLeft="5.50000000000003,208.7" />
         <NodeLayout
-          Size="185,42"
+          Size="184.8,41.6"
           Id="Package\Create New Backups\Database Optimization"
-          TopLeft="26.5,107.5" />
+          TopLeft="26.7,107.1" />
         <NodeLayout
-          Size="133,42"
+          Size="132.8,41.6"
           Id="Package\Create New Backups\Shrink Files"
-          TopLeft="52.5,5.5" />
+          TopLeft="52.7,5.49999999999995" />
         <EdgeLayout
           Id="Package\Create New Backups.PrecedenceConstraints[Constraint]"
-          TopLeft="119,47.5">
+          TopLeft="119.1,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -979,7 +936,7 @@ GO"</DTS:PropertyExpression>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Create New Backups.PrecedenceConstraints[Constraint 1]"
-          TopLeft="119,149.5">
+          TopLeft="119.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1002,43 +959,43 @@ GO"</DTS:PropertyExpression>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="238,307"
-          Size="238,350"
+          PanelSize="238.4,305.6"
+          Size="238.4,348.8"
           Id="Package\Create New Backups"
-          TopLeft="76.9711892064071,107.008870040052" />
+          TopLeft="75.1,107.1" />
         <NodeLayout
-          Size="281,42"
+          Size="277.6,41.6"
           Id="Package\Delete Old GroupInsuranceExports Backup"
-          TopLeft="56,5.5" />
+          TopLeft="55.5,5.49999999999995" />
         <NodeLayout
-          Size="380,42"
+          Size="377.6,41.6"
           Id="Package\Get Current Date Time To Tack Onto End Of MDF And LDF Files"
-          TopLeft="5.50000000000006,517.5" />
+          TopLeft="5.50000000000006,515.9" />
         <NodeLayout
-          Size="263,42"
+          Size="263.2,41.6"
           Id="Package\Restore Backups\Restore GroupInsuranceExports On QA"
-          TopLeft="5.5,5.5" />
+          TopLeft="5.5,5.50000000000007" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="274,103"
-          Size="274,146"
+          PanelSize="274.4,102.4"
+          Size="274.4,145.6"
           Id="Package\Restore Backups"
-          TopLeft="58.5000000000001,619.5" />
+          TopLeft="57.1000000000001,617.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="195.735594603204,457.008870040052">
+          TopLeft="194.3,455.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.4911299599481"
+              EndConnector="0,60.0000000000002"
               Start="0,0"
-              End="0,52.9911299599481">
+              End="0,52.5000000000002">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.9911299599481" />
+                    End="0,52.5000000000002" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1049,18 +1006,18 @@ GO"</DTS:PropertyExpression>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="196.235594603204,47.5">
+          TopLeft="194.3,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.508870040052"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.008870040052">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.008870040052" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1071,7 +1028,7 @@ GO"</DTS:PropertyExpression>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="195.5,559.5">
+          TopLeft="194.3,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CINPSQL21"
+  DTS:DTSID="{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=10.9.57.8;User ID=jdauser;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-DeployDataCycleDatabases-{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}CINPSQL21.NYC.AMLAW.CORP.jdauser;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAACAAAAAAAQZgAAAAEAACAAAAAXiEe1vnc++VILGvMmfRnCOuSaNQsuQZQ4pE3axnY9awAAAAAOgAAAAAIAACAAAAAHAq1vf7reSOFMCpqwlae41ONukhQwqbZSQgOzSR8XNIAAAAD5QrekadjU9z9tEH6ZD8AhfV8Fy3YlvybcJkBHBX0oCdoV+rRTZlH+3KDopd7YSgYHqveyTP5DZGLNLu6vhHiRfdBNY6BxkAqnTbxWeXSCnzrxLYlyUxGIUeYeBWs5VI5Rn7FqF5UXc9Hw5nhvijmWIiaocUBpG5aySCplxI+wakAAAAA+ljs+4io7YNWD4VcnuzHHVmcWJkb3GKVIHvt85XfEWzraFVOFjoZUp4ZX1+egxr8CDXDo0fDUy2J/GwyOSNRo</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

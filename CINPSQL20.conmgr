@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CINPSQL20"
+  DTS:DTSID="{EB5CF017-7B2D-4036-9DCF-D17FA04D16E9}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=10.9.60.43\processing;User ID=jdauser;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-DeployDataCycleDatabases-{EB5CF017-7B2D-4036-9DCF-D17FA04D16E9}10.9.60.43\processing.jdauser;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAACAAAAAAAQZgAAAAEAACAAAADY7XyEqBysblhT3k8J9BN91V+7bYFqoorhfq2gOWpqvgAAAAAOgAAAAAIAACAAAADtmEZuXVcTJrtWXVxQHQjCbHj1WrszBVoa5iORVTp+soAAAACKSpbsLeystPyrUOAwLertqJqsIUM+Ee6xCzaDjdIL+f9PZUTp+d6Hh2gTJuypc6bN26czKe9bfk7ibU6jWNPffxHuRVnwcorpCzEvvcJFVpagyZD0BWTbHoJsN+ACbhG7YPc5t+zUXeBD7RjNiGkZXWinm18GMgmWKU74j34p8UAAAAAhbBPgf5v0V6IZellJpcvAS9XCbtZMFSnexeTFejk+baiMh1VXZerhBBBOwcrr1YEzwFMeNplTHXwU9D4k3VAZ</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

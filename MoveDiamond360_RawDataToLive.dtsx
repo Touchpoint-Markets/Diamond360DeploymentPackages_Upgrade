@@ -1,88 +1,20 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/14/2013 7:04:13 PM"
-  DTS:CreationName="SSIS.Package.3"
+  DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="CINPSQL20"
   DTS:CreatorName="SBMEDIA\kfortney"
   DTS:DTSID="{05EF6B81-DCD4-47EB-B8A6-73168E4E48B2}"
-  DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.7001.0"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="MoveDiamond360_RawDataToLive"
   DTS:PackageType="5"
-  DTS:VersionBuild="105"
-  DTS:VersionGUID="{0152D2B5-1B3E-47E6-99BE-15E68258CC6F}">
+  DTS:VersionBuild="113"
+  DTS:VersionGUID="{892D594B-9611-45C0-9D43-1C8C3B63CC09}">
   <DTS:Property
-    DTS:Name="PackageFormatVersion">6</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINPSQL20\PROCESSING]"
-      DTS:CreationName="ADO.NET:SQL"
-      DTS:DTSID="{F7647154-4904-40B8-81F5-9D465F2B0843}"
-      DTS:ObjectName="CINPSQL20\PROCESSING">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Initial Catalog=master;Persist Security Info=True;Connect Timeout=30;Application Name=SSIS-MoveDiamond360_RawDataToQA-{F7647154-4904-40B8-81F5-9D465F2B0843}CINPSQL20\PROCESSING;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1" />
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINPSQL20\PROCESSING.Diamond360_RawData]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{87BBACEF-B587-4635-91A5-EC7BEA7BD381}"
-      DTS:ObjectName="CINPSQL20\PROCESSING.Diamond360_RawData">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Initial Catalog=Diamond360_RawData;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1" />
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINPSQL21]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{DC52835A-740C-43C7-ADE2-F67D17847620}"
-      DTS:ObjectName="CINPSQL21">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=10.9.57.8;User ID=jdauser;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1" />
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[cinvsql24.nyc.amlaw.corp.Diamond360.jdauser]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{19CF5F93-66A8-4CE8-9C7F-370FAEFA1E80}"
-      DTS:ObjectName="cinvsql24.nyc.amlaw.corp.Diamond360.jdauser">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=cinvsql24;User ID=jdauser;Initial Catalog=Diamond360;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1" />
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Diamond360_RawData_Backup.bak]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{038A9B63-D63B-4BB7-A9F9-7321DAFE4A70}"
-      DTS:ObjectName="Diamond360_RawData_Backup.bak">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="\\SUNVWIN360DB02\amc\D360Backups\Diamond360_RawData_Backup.bak" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -125,97 +57,11 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Create New Backups"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Sequence Container"
-      DTS:Disabled="True"
-      DTS:DTSID="{a473b633-b280-4eb7-b7e1-1b82a9fa058c}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Create New Backups">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Create New Backups\Backup Diamond360_RawData"
-          DTS:CreationName="Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceTSQLExecuteTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-          DTS:Description="Execute T-SQL Statement Task"
-          DTS:DTSID="{7ff287dd-35b7-4fa8-99f1-3c72d19c2fe5}"
-          DTS:ExecutableType="Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceTSQLExecuteTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Backup Diamond360_RawData"
-          DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:SqlStatementSource="BACKUP DATABASE Diamond360_RawData&#xA;    TO DISK = '\\Sunvwin360db01\amc\D360Backups\Diamond360_RawData_Backup.bak'&#xA;WITH COMPRESSION"
-              SQLTask:ServerVersion="9"
-              SQLTask:ExtendedLogging="True"
-              SQLTask:LocalConnectionForLogging=""
-              SQLTask:TaskName=""
-              SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Create New Backups\Database Optimization"
-          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{d54c78bf-a63a-4f52-b0a0-c39cc4b80ede}"
-          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Database Optimization"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{29434133-E10C-4F9F-A0B6-12289B660701}"
-              SQLTask:SqlStatementSource="EXEC RebuildReOrgFragmentedIndexes_SingleDatabase @DatabaseName = 'Diamond360_RawData'&#xA;EXEC UpdateStatistics_SingleDatabase @DatabaseName = 'Diamond360_RawData'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Create New Backups\Shrink Files"
-          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{3b8da5e7-7b34-4f7b-be86-d6a3490428f3}"
-          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Shrink Files"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{87BBACEF-B587-4635-91A5-EC7BEA7BD381}"
-              SQLTask:SqlStatementSource="DBCC SHRINKFILE (N'Diamond360_RawData' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'Diamond360_RawData' , 0, TRUNCATEONLY)&#xA;GO&#xA;&#xA;DBCC SHRINKFILE (N'Diamond360_RawData_log' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'Diamond360_RawData_log' , 0, TRUNCATEONLY)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Create New Backups.PrecedenceConstraints[Constraint]"
-          DTS:CreationName=""
-          DTS:DTSID="{5d7588bc-eb45-4b41-862f-5dd70a75fbae}"
-          DTS:From="Package\Create New Backups\Shrink Files"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint"
-          DTS:To="Package\Create New Backups\Database Optimization" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Create New Backups.PrecedenceConstraints[Constraint 1]"
-          DTS:CreationName=""
-          DTS:DTSID="{8fa553db-78b1-48e0-a7be-58a9147655da}"
-          DTS:From="Package\Create New Backups\Database Optimization"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Create New Backups\Backup Diamond360_RawData" />
-      </DTS:PrecedenceConstraints>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\Delete Diamond360_RawData_Old Database"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{19CD483A-706F-4056-BAEC-46DF258C5621}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Delete Diamond360_RawData_Old Database"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -223,34 +69,16 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{DC52835A-740C-43C7-ADE2-F67D17847620}"
+          SQLTask:Connection="{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}"
           SQLTask:SqlStatementSource="IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;EXEC msdb.dbo.sp_delete_database_backuphistory @database_name = N'Diamond360_RawData_Old'&#xA;GO&#xA;USE [master]&#xA;GO&#xA;IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;ALTER DATABASE [Diamond360_RawData_Old] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;GO&#xA;USE [master]&#xA;GO&#xA;IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;DROP DATABASE [Diamond360_RawData_Old]&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Delete Old Diamond360_RawData Backup"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-      DTS:Description="File System Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{ECB64D6C-1DF6-4CF7-A440-F2FAB4F42231}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Delete Old Diamond360_RawData Backup"
-      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <FileSystemData
-          TaskOperationType="DeleteFile"
-          TaskSourcePath="{038A9B63-D63B-4BB7-A9F9-7321DAFE4A70}" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\Get Current Date Time To Tack Onto End Of MDF And LDF Files"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
       DTS:DTSID="{DE8B21FF-D7B7-4A49-A72D-B3D694064DE5}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Current Date Time To Tack Onto End Of MDF And LDF Files"
       DTS:ThreadHint="0">
@@ -258,40 +86,19 @@
       <DTS:ObjectData>
         <ScriptProject
           Name="ST_32975033dfce48a1b108b37671d69815"
-          VSTAMajorVersion="3"
+          VSTAMajorVersion="17"
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadWriteVariables="User::Diamond360_RawDataFileName,User::Diamond360_RawDataFilestreamName">
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -426,8 +233,10 @@ using System.Runtime.CompilerServices;
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ST_32975033dfce48a1b108b37671d69815</RootNamespace>
     <AssemblyName>ST_32975033dfce48a1b108b37671d69815</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -453,8 +262,8 @@ using System.Runtime.CompilerServices;
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
@@ -489,7 +298,7 @@ using System.Runtime.CompilerServices;
         <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" />
         <Host Name="ScriptTask" />
         <ProjectClient>
-          <HostIdentifier>SSIS_ST110</HostIdentifier>
+          <HostIdentifier>SSIS_ST170</HostIdentifier>
         </ProjectClient>
       </FlavorProperties>
     </VisualStudio>
@@ -615,22 +424,22 @@ namespace ST_32975033dfce48a1b108b37671d69815
           <ProjectItem
             Name="Project"
             Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:CodeName>ST_32975033dfce48a1b108b37671d69815</msb:CodeName>
-		<msb:DisplayName>ST_32975033dfce48a1b108b37671d69815</msb:DisplayName>
-		<msb:ProjectId>{F097732E-2548-488B-B41A-A8A534EA9393}</msb:ProjectId>
-		<msb:Language>msBuild</msb:Language>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_32975033dfce48a1b108b37671d69815.csproj"/>
-		<msb:File Include="Properties\AssemblyInfo.cs"/>
-		<msb:File Include="Properties\Resources.resx"/>
-		<msb:File Include="Properties\Settings.Designer.cs"/>
-		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="Properties\Settings.settings"/>
-		<msb:File Include="ScriptMain.cs"/>
-	</msb:ItemGroup>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_32975033dfce48a1b108b37671d69815</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_32975033dfce48a1b108b37671d69815</msb:DisplayName>
+    <msb:ProjectId>{E114307D-7B46-43A4-B539-22859E2C5588}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_32975033dfce48a1b108b37671d69815.csproj" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Settings.Designer.cs"
@@ -662,14 +471,35 @@ namespace ST_32975033dfce48a1b108b37671d69815.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -741,121 +571,121 @@ namespace ST_32975033dfce48a1b108b37671d69815.Properties {
           <BinaryItem
             Name="ST_32975033dfce48a1b108b37671d69815.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAEpCbVMAAAAAAAAAAOAAAiELAQsAABIAAAAIAAAAAAAAPjEA
-AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAOQwAABXAAAAAEAAAAgEAAAAAAAAAAAAAAAAAAAA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAA63L2oAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAAijAA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADgwAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAARBEAAAAgAAAAEgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAAgEAAAAQAAAAAYAAAAUAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAGgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAg
-MQAAAAAAAEgAAAACAAUAMCMAALQNAAABAAAAAAAAAHgiAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKA4AAAoqEzACAC0AAAABAAARfgEAAAQtIHIBAABw0AIA
-AAIoDwAACm8QAAAKcxEAAAoKBoABAAAEfgEAAAQqGn4CAAAEKh4CgAIAAAQqGn4DAAAEKi5zBgAA
-BoADAAAEKh4CKBQAAAoqABMwBQCiAQAAAgAAEQIoFgAACm8XAAAKcnMAAHBvGAAACnKpAABwHI0B
-AAABCgYWKBkAAAoLEgEoGgAACgwSAigbAAAKogYXKBkAAAoNEgMoHAAAChMEEgQoGwAACqIGGCgZ
-AAAKEwUSBSgdAAAKEwYSBigbAAAKogYZKBkAAAoTBxIHKB4AAAoTCBIIKBsAAAqiBhooGQAAChMJ
-EgkoHwAAChMKEgooGwAACqIGGygZAAAKEwsSCyggAAAKEwwSDCgbAAAKogYoIQAACm8iAAAKAigW
-AAAKbxcAAApy/wAAcG8YAAAKckEBAHAcjQEAAAETDRENFigZAAAKEw4SDigaAAAKEw8SDygbAAAK
-ohENFygZAAAKExASECgcAAAKExESESgbAAAKohENGCgZAAAKExISEigdAAAKExMSEygbAAAKohEN
-GSgZAAAKExQSFCgeAAAKExUSFSgbAAAKohENGigZAAAKExYSFigfAAAKExcSFygbAAAKohENGygZ
-AAAKExgSGCggAAAKExkSGSgbAAAKohENKCEAAApvIgAACgIoFgAAChZvIwAACioeAigkAAAKKgAA
-AAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNj
-b3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1i
-NzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAA
-AAAAAAAAUEFEUEFEULQAAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAAABAAA
-I34AAGwEAAAMBgAAI1N0cmluZ3MAAAAAeAoAAJQBAAAjVVMADAwAABAAAAAjR1VJRAAAABwMAACY
-AQAAI0Jsb2IAAAAAAAAAAgAAAVcdogEJAwAAAPolMwAWAAABAAAAIAAAAAUAAAAGAAAACQAAAAEA
-AAAkAAAAAgAAAA8AAAACAAAAAgAAAAMAAAAEAAAAAQAAAAQAAAABAAAAAQAAAAAACgABAAAAAAAG
-AMEAugAKAN0AyAAOAD0BFAEGAFkBugAGAG8BXgEGAKABiwEGAFcCPQIGAIICcAIGAJkCcAIGALYC
-cAIGANUCcAIGAO4CcAIGAAcDcAIGACIDcAIGAD0DcAIGAFYDcAIGAI8DbwMGAK8DbwMGAOADzQMG
-AP0DugAGAAIEugAGACYEcAIKAFIEPAQKAGsEPAQGAIAEbwMOAKIEFAEOAMQEFAESAB0F/QQSADUF
-/QQGAEcFugAGAGIFugAGAKEFugAAAAAAAQAAAAAAAQABAAAAEAAyADwABQABAAEAAAEQAGsAPAAJ
-AAMABQABABAAdAB/AA0ABAAIAAMBAACjAAAAEQAEAAoAEQB/ARMAEQCsARcAEQD2ATkABgYfAkcA
-VoAnAkoAVoAvAkoAUCAAAAAAgxi8ARsAAQBYIAAAAACTCMIBHwABAJEgAAAAAJMI1gEkAAEAmCAA
-AAAAkwjiASkAAQCgIAAAAACWCAYCPQACALMgAAAAAIYYvAEbAAIApyAAAAAAkRibBIkAAgC8IAAA
-AACGABoCGwACAGoiAAAAAIYYvAEbAAIAAAABADcCOQC8AVgAQQC8AVgASQC8AVgAUQC8AVgAWQC8
-AVgAYQC8AVgAaQC8AVgAcQC8AVgAeQC8AVgAgQC8AVgAiQC8AV0AkQC8ARsAmQC8ARsACQC8ARsA
-oQAUBGIAoQAvBGkAKQC8AW4AuQC8AXoAyQC8ARsAEQC8ARsA0QC8ARsAGQDWBI0A2QAnBZIA4QA+
-BZcA8QBQBZ0A8QBYBaIA+QBoBaYA8QBxBaIA8QB5BaIA8QCCBaIA8QCLBaIA8QCWBaIAAQGoBaoA
-6QCvBbEA2QC5BV0AGQC8ARsACAAUAE4ACAAYAFMAKQCTAIAALgAbAFIBLgAjAFIBLgBjAHgBLgAL
-AOEALgATACkBLgAzACkBLgArAFIBLgA7AFgBLgBDAFIBLgBbAG8BQwBrAFMASQCTAIAAYQCbAFMA
-gwCrAFMAdQC2AAIAAQADAAMAAABvAS8AAADuATQAAAASAkIAAgACAAMAAgADAAUAAQAEAAUAAgAF
-AAcABIAAAAEAAAB6FLVpAAAAAAAAfwAAAAQAAAAAAAAAAAAAAAEAsQAAAAAABAAAAAAAAAAAAAAA
-AQC6AAAAAAALAAAAAAAAAAAAAAAKAPUAAAAAAAsAAAAAAAAAAAAAAAoA3gQAAAAAAAAAAAEAAADI
-BQAABQAEAAAAADxNb2R1bGU+AFNUXzMyOTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1LmRs
-bABSZXNvdXJjZXMAU1RfMzI5NzUwMzNkZmNlNDhhMWIxMDhiMzc2NzFkNjk4MTUuUHJvcGVydGll
-cwBTZXR0aW5ncwBTY3JpcHRNYWluAFNUXzMyOTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1
-AFNjcmlwdFJlc3VsdHMAbXNjb3JsaWIAU3lzdGVtAE9iamVjdABTeXN0ZW0uQ29uZmlndXJhdGlv
-bgBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBNaWNyb3NvZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sA
-TWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuVGFza3MuU2NyaXB0VGFzawBWU1RBUlRTY3JpcHRPYmpl
-Y3RNb2RlbEJhc2UARW51bQBTeXN0ZW0uUmVzb3VyY2VzAFJlc291cmNlTWFuYWdlcgByZXNvdXJj
-ZU1hbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBDdWx0dXJlSW5mbwByZXNvdXJjZUN1bHR1cmUALmN0
-b3IAZ2V0X1Jlc291cmNlTWFuYWdlcgBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQBDdWx0dXJlAGRl
-ZmF1bHRJbnN0YW5jZQBnZXRfRGVmYXVsdABEZWZhdWx0AE1haW4AdmFsdWVfXwBTdWNjZXNzAEZh
-aWx1cmUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUYXJnZXRGcmFtZXdvcmtBdHRy
-aWJ1dGUAU3lzdGVtLlJlZmxlY3Rpb24AQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseURl
-c2NyaXB0aW9uQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJs
-eUNvbXBhbnlBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJp
-Z2h0QXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAEFzc2VtYmx5Q3VsdHVyZUF0
-dHJpYnV0ZQBBc3NlbWJseVZlcnNpb25BdHRyaWJ1dGUAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJT
-ZXJ2aWNlcwBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmls
-aXR5QXR0cmlidXRlAFN5c3RlbS5EaWFnbm9zdGljcwBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmli
-dXRlAFR5cGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAQXNzZW1ibHkAZ2V0
-X0Fzc2VtYmx5AFN5c3RlbS5Db21wb25lbnRNb2RlbABFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUA
-RWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUALmNjdG9yAFNT
-SVNTY3JpcHRUYXNrRW50cnlQb2ludEF0dHJpYnV0ZQBTY3JpcHRPYmplY3RNb2RlbABnZXRfRHRz
-AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuTWFuYWdlZERUUwBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5S
-dW50aW1lAFZhcmlhYmxlcwBnZXRfVmFyaWFibGVzAFZhcmlhYmxlAGdldF9JdGVtAERhdGVUaW1l
-AGdldF9Ob3cAZ2V0X01vbnRoAEludDMyAFRvU3RyaW5nAGdldF9EYXkAZ2V0X1llYXIAZ2V0X0hv
-dXIAZ2V0X01pbnV0ZQBnZXRfU2Vjb25kAFN0cmluZwBGb3JtYXQAc2V0X1ZhbHVlAHNldF9UYXNr
-UmVzdWx0AFNUXzMyOTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1LlByb3BlcnRpZXMuUmVz
-b3VyY2VzLnJlc291cmNlcwAAAHFTAFQAXwAzADIAOQA3ADUAMAAzADMAZABmAGMAZQA0ADgAYQAx
-AGIAMQAwADgAYgAzADcANgA3ADEAZAA2ADkAOAAxADUALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4A
-UgBlAHMAbwB1AHIAYwBlAHMAADVEAGkAYQBtAG8AbgBkADMANgAwAF8AUgBhAHcARABhAHQAYQBG
-AGkAbABlAE4AYQBtAGUAAFVEAGkAYQBtAG8AbgBkADMANgAwAF8AUgBhAHcARABhAHQAYQBfAHsA
-MAB9AF8AewAxAH0AXwB7ADIAfQBfAHsAMwB9AF8AewA0AH0AXwB7ADUAfQAAQUQAaQBhAG0AbwBu
-AGQAMwA2ADAAXwBSAGEAdwBEAGEAdABhAEYAaQBsAGUAcwB0AHIAZQBhAG0ATgBhAG0AZQAAUVMA
-dQBtAG0AaQB0AEYAaQBsAGUAUwB0AHIAZQBhAG0AXwB7ADAAfQBfAHsAMQB9AF8AewAyAH0AXwB7
-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
+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
+2gCKAFAgAAAAAIYA8wMGAAEA3SEAAAAAhhhdBAYAAQDlIQAAAACDGF0EBgABAO0hAAAAAJMISQSO
+AAEAGSIAAAAAkwjiAJMAAQAgIgAAAACTCO4AmAABACgiAAAAAJYIewWeAAIALyIAAAAAhhhdBAYA
+AgA3IgAAAACRGGMEowACAAAAAQABAwkAXQQBABEAXQQGABkAXQQKACkAXQQQADEAXQQQADkAXQQQ
+AEEAXQQQAEkAXQQQAFEAXQQQAFkAXQQQAGEAXQQQAGkAXQQGAIkAXQQGALEAXQQVAMEAXQQGAHEA
+VwUhAMkAOAUmANEAzAMrAHkAlgUxAHkAKgM2AOEAIQM6AHkAngU2AHkAQAQ2AHkAagQ2AHkA7AI2
+AHkAZAA2AOkAbQU+ANkA9wJFAMkAhwUBAHEAXQQGAJEAXQQGAPEAmgBKAPEApgVRAJkAXQRXALkA
+XQQGAAgAFABxAAgAGAB2ACkAcwDeAC4ACwC2AC4AEwC/AC4AGwDeAC4AIwDnAC4AKwAQAS4AMwAQ
+AS4AOwAQAS4AQwDnAC4ASwAWAS4AUwAQAS4AWwAtAUMAYwB2AEkAcwDeAGEAewB2AGMAawB2ABsA
+AwABAAQAAwAAAE0EpwAAAAIBrAAAAH8FsQACAAQAAwACAAUABQABAAYABQACAAcABwAEgAAAAQAA
+AL4l82EAAAAAAAAHAAAABAAAAAAAAAAAAAAAXwBbAAAAAAARAAAAAAAAAAAAAABoADQDAAAAAAQA
+AAAAAAAAAAAAAF8A1QMAAAAAEQAAAAAAAAAAAAAAaAA0AAAAAAAAAAAAAQAAALcEAAAFAAIAAAAA
+AABJbnQzMgBTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgxNQA8TW9kdWxlPgBNaWNy
+b3NvZnQuU3FsU2VydmVyLk1hbmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBnZXRfU2Vjb25kAGRl
+ZmF1bHRJbnN0YW5jZQBWYXJpYWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRs
+ZQBEYXRlVGltZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5SdW50aW1lAFR5cGUARmFpbHVyZQBn
+ZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAVlNUQVJUU2NyaXB0T2JqZWN0
+TW9kZWxCYXNlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENv
+bXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVi
+dWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0
+dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1
+dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRy
+aWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRy
+aWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRyeVBvaW50
+QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0
+dHJpYnV0ZQBnZXRfTWludXRlAHNldF9WYWx1ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9u
+aW5nAFRvU3RyaW5nAGdldF9Nb250aABNaWNyb3NvZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sATWlj
+cm9zb2Z0LlNxbFNlcnZlci5EdHMuVGFza3MuU2NyaXB0VGFzawBTY3JpcHRPYmplY3RNb2RlbABT
+eXN0ZW0uQ29tcG9uZW50TW9kZWwAU1RfMzI5NzUwMzNkZmNlNDhhMWIxMDhiMzc2NzFkNjk4MTUu
+ZGxsAGdldF9JdGVtAFN5c3RlbQBFbnVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNv
+bmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24AQ3VsdHVy
+ZUluZm8AZ2V0X1llYXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAZ2V0X0hvdXIA
+U3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVt
+LlJlc291cmNlcwBTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgxNS5Qcm9wZXJ0aWVz
+LlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU1RfMzI5NzUwMzNkZmNlNDhhMWIx
+MDhiMzc2NzFkNjk4MTUuUHJvcGVydGllcwBnZXRfVmFyaWFibGVzAFNldHRpbmdzAFN1Y2Nlc3MA
+Z2V0X0R0cwBTY3JpcHRSZXN1bHRzAEZvcm1hdABPYmplY3QAZ2V0X0RlZmF1bHQAc2V0X1Rhc2tS
+ZXN1bHQAZ2V0X05vdwBnZXRfRGF5AGdldF9Bc3NlbWJseQAAADVEAGkAYQBtAG8AbgBkADMANgAw
+AF8AUgBhAHcARABhAHQAYQBGAGkAbABlAE4AYQBtAGUAAFVEAGkAYQBtAG8AbgBkADMANgAwAF8A
+UgBhAHcARABhAHQAYQBfAHsAMAB9AF8AewAxAH0AXwB7ADIAfQBfAHsAMwB9AF8AewA0AH0AXwB7
+ADUAfQAAQUQAaQBhAG0AbwBuAGQAMwA2ADAAXwBSAGEAdwBEAGEAdABhAEYAaQBsAGUAcwB0AHIA
+ZQBhAG0ATgBhAG0AZQAAUVMAdQBtAG0AaQB0AEYAaQBsAGUAUwB0AHIAZQBhAG0AXwB7ADAAfQBf
+AHsAMQB9AF8AewAyAH0AXwB7ADMAfQBfAHsANAB9AF8AewA1AH0AAHFTAFQAXwAzADIAOQA3ADUA
+MAAzADMAZABmAGMAZQA0ADgAYQAxAGIAMQAwADgAYgAzADcANgA3ADEAZAA2ADkAOAAxADUALgBQ
+AHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAYj5UvNOm+SJzaJgn3TEGo
+AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFVBQcCET0IBCAAEmUEIAASaQUgARJtHAQAABE9AyAA
+CAMgAA4GAAIODh0cBCABARwGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEE
+AAAAAAQBAAAAAwYSTQMGElEDBhIQAgYIAwYRFAQAABJNBAAAElEFAAEBElEEAAASEAMAAAEECAAS
+TQQIABJRBAgAEhAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAA
+AAAAKAEAI1NUXzMyOTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1AAAFAQAAAAAWAQARQ29w
+eXJpZ2h0IEAgIDIwMTMAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3
+b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43ALQAAADOyu++AQAAAJEAAABsU3lzdGVt
+LlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3Vs
+dHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNv
+dXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAABgMAAAAAAAAAAA
+AAB6MAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbDAAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBt
+c2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
-AEgAAABYQAAAsAMAAAAAAAAAAAAAsAM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
-AAAAAL0E7/4AAAEAAAABALVpehQAAAEAtWl6FD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
+AEgAAABYQAAAGgQAAAAAAAAAAAAAGgQ0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
+AAAAAL0E7/4AAAEAAAABAPNhviUAAAEA82G+JT8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
 AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
-bgAAAAAAAACwBBADAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAOwCAAABADAAMAAw
-ADAAMAA0AGIAMAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAFQA
-XwAzADIAOQA3ADUAMAAzADMAZABmAGMAZQA0ADgAYQAxAGIAMQAwADgAYgAzADcANgA3ADEAZAA2
-ADkAOAAxADUAAABAAA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4ANQAyADQA
-MgAuADIANwAwADYAMQAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAFQAXwAz
-ADIAOQA3ADUAMAAzADMAZABmAGMAZQA0ADgAYQAxAGIAMQAwADgAYgAzADcANgA3ADEAZAA2ADkA
-OAAxADUALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBw
-AHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADEAMwAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkA
-bABlAG4AYQBtAGUAAABTAFQAXwAzADIAOQA3ADUAMAAzADMAZABmAGMAZQA0ADgAYQAxAGIAMQAw
-ADgAYgAzADcANgA3ADEAZAA2ADkAOAAxADUALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQA
-TgBhAG0AZQAAAAAAUwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4
-AGIAMwA3ADYANwAxAGQANgA5ADgAMQA1AAAARAAPAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkA
-bwBuAAAAMQAuADAALgA1ADIANAAyAC4AMgA3ADAANgAxAAAAAABIAA8AAQBBAHMAcwBlAG0AYgBs
-AHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgA1ADIANAAyAC4AMgA3ADAANgAxAAAAAAAAAAAA
+bgAAAAAAAACwBHoDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAFYDAAABADAAMAAw
+ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEA
+bgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAA
+AAAAUwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3ADYA
+NwAxAGQANgA5ADgAMQA1AAAAPgAPAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAu
+ADkANgA2ADIALgAyADUAMAA3ADUAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAA
+UwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3ADYANwAx
+AGQANgA5ADgAMQA1AC4AZABsAGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQA
+AABDAG8AcAB5AHIAaQBnAGgAdAAgAEAAIAAgADIAMAAxADMAAAAqAAEAAQBMAGUAZwBhAGwAVABy
+AGEAZABlAG0AYQByAGsAcwAAAAAAAAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4A
+YQBtAGUAAABTAFQAXwAzADIAOQA3ADUAMAAzADMAZABmAGMAZQA0ADgAYQAxAGIAMQAwADgAYgAz
+ADcANgA3ADEAZAA2ADkAOAAxADUALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0A
+ZQAAAAAAUwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3
+ADYANwAxAGQANgA5ADgAMQA1AAAAQgAPAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAA
+MQAuADAALgA5ADYANgAyAC4AMgA1ADAANwA1AAAAAABGAA8AAQBBAHMAcwBlAG0AYgBsAHkAIABW
+AGUAcgBzAGkAbwBuAAAAMQAuADAALgA5ADYANgAyAC4AMgA1ADAANwA1AAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAEAxAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAIwwAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -866,30 +696,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </ScriptProject>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Rename Filestream"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-      DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{0F6E8207-762A-4092-BA0B-AEED82252635}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Rename Filestream"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:PropertyExpression
-        DTS:Name="SqlStatementSource">"ALTER DATABASE Diamond360_RawData_New SET SINGLE_USER WITH ROLLBACK IMMEDIATE
-ALTER DATABASE Diamond360_RawData_New SET FILESTREAM( DIRECTORY_NAME = N'" + @[User::Diamond360_RawDataFilestreamName] + "' ) WITH NO_WAIT
-
-ALTER DATABASE Diamond360_RawData_New SET MULTI_USER 
-GO"</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{DC52835A-740C-43C7-ADE2-F67D17847620}"
-          SQLTask:SqlStatementSource="ALTER DATABASE Diamond360_RawData_New SET SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;ALTER DATABASE Diamond360_RawData_New SET FILESTREAM( DIRECTORY_NAME = N'' ) WITH NO_WAIT&#xA;&#xA;ALTER DATABASE Diamond360_RawData_New SET MULTI_USER &#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -904,10 +710,10 @@ GO"</DTS:PropertyExpression>
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Restore Backups\Restore Diamond360_RawData On Live"
-          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{598EE61A-DFAF-482D-A410-6F24984C5A5B}"
-          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Restore Diamond360_RawData On Live"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -921,7 +727,7 @@ MOVE 'Diamond360_RawData_Log' TO '" + @[User::Diamond360_RawDataLogDrive]  + ":\
 GO"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{DC52835A-740C-43C7-ADE2-F67D17847620}"
+              SQLTask:Connection="{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}"
               SQLTask:SqlStatementSource="RESTORE DATABASE Diamond360_RawData_New &#xA;FROM DISK = '\\SUNVWIN360DB02\amc\D360Backups\Diamond360_RawData_Backup.bak' &#xA;WITH MOVE 'Diamond360_RawData' TO 'H:\Data\.mdf',&#xA;MOVE 'Diamond360_RawData_Log' TO 'L:\LDF\.ldf' &#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -929,10 +735,10 @@ GO"</DTS:PropertyExpression>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Setup EINFinder Logins"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{0F850496-45EE-4E1D-9CDD-9A85D6F2323F}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Setup EINFinder Logins"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -940,20 +746,12 @@ GO"</DTS:PropertyExpression>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{DC52835A-740C-43C7-ADE2-F67D17847620}"
+          SQLTask:Connection="{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}"
           SQLTask:SqlStatementSource="USE [Diamond360_RawData_New]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'EINAdmin')&#xA;DROP USER [EINAdmin]&#xA;GO&#xA;&#xA;CREATE USER [EINAdmin] FOR LOGIN [EINAdmin] WITH DEFAULT_SCHEMA=[EINAdmin]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'EINFinder')&#xA;DROP USER [EINFinder]&#xA;GO&#xA;&#xA;CREATE USER [EINFinder] FOR LOGIN [EINFinder] WITH DEFAULT_SCHEMA=[EINFinder]&#xA;GO&#xA;&#xA;ALTER ROLE [db_owner] ADD MEMBER [EINFinder] &#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'jdauser')&#xA;DROP USER [jdauser]&#xA;GO&#xA;&#xA;CREATE USER [jdauser] FOR LOGIN [jdauser] WITH DEFAULT_SCHEMA=[jdauser]&#xA;GO&#xA;&#xA;ALTER ROLE [db_owner] ADD MEMBER [jdauser]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{4CA546AF-F816-4185-AA63-E10189B64BA8}"
-      DTS:From="Package\Delete Old Diamond360_RawData Backup"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Create New Backups" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
@@ -978,169 +776,56 @@ GO"</DTS:PropertyExpression>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Restore Backups" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
-      DTS:CreationName=""
-      DTS:DTSID="{B12487D1-78CB-429E-89CF-A0CFFBC0EE79}"
-      DTS:From="Package\Create New Backups"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 4"
-      DTS:To="Package\Delete Diamond360_RawData_Old Database" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
-      DTS:CreationName=""
-      DTS:DTSID="{918FEE07-4252-463E-A878-DE3B2B3B639C}"
-      DTS:From="Package\Setup EINFinder Logins"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 5"
-      DTS:To="Package\Rename Filestream" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="sql11">
+  Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="224,42"
-          Id="Package\Create New Backups\Backup Diamond360_RawData"
-          TopLeft="5.50000000000003,209.5" />
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Create New Backups\Database Optimization"
-          TopLeft="25,107.5" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Create New Backups\Shrink Files"
-          TopLeft="51,5.5" />
-        <EdgeLayout
-          Id="Package\Create New Backups.PrecedenceConstraints[Constraint]"
-          TopLeft="117.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Create New Backups.PrecedenceConstraints[Constraint 1]"
-          TopLeft="117.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="235,307"
-          Size="235,43"
-          Id="Package\Create New Backups"
-          TopLeft="78,107.5" />
-        <NodeLayout
-          Size="289,42"
+          Size="288,41.6"
           Id="Package\Delete Diamond360_RawData_Old Database"
-          TopLeft="51,210.5" />
+          TopLeft="50.3,5.50000000000007" />
         <NodeLayout
-          Size="276,42"
-          Id="Package\Delete Old Diamond360_RawData Backup"
-          TopLeft="57.5,5.5" />
-        <NodeLayout
-          Size="380,42"
+          Size="377.6,41.6"
           Id="Package\Get Current Date Time To Tack Onto End Of MDF And LDF Files"
-          TopLeft="5.50000000000003,312.5" />
+          TopLeft="5.5,107.1" />
         <NodeLayout
-          Size="169,42"
-          Id="Package\Rename Filestream"
-          TopLeft="111,722.5" />
-        <NodeLayout
-          Size="264,42"
+          Size="264,41.6"
           Id="Package\Restore Backups\Restore Diamond360_RawData On Live"
-          TopLeft="5.5,5.5" />
+          TopLeft="5.5,5.50000000000007" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="275,103"
-          Size="275,146"
+          PanelSize="275.2,102.4"
+          Size="275.2,145.6"
           Id="Package\Restore Backups"
-          TopLeft="58.0000000000001,414.5" />
+          TopLeft="56.7,208.7" />
         <NodeLayout
-          Size="189,42"
+          Size="188.8,41.6"
           Id="Package\Setup EINFinder Logins"
-          TopLeft="101,620.5" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="195.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="99.9000000000001,414.3" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="195.5,252.5">
+          TopLeft="194.3,47.1000000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1151,18 +836,18 @@ GO"</DTS:PropertyExpression>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="195.5,560.5">
+          TopLeft="194.3,354.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1173,51 +858,7 @@ GO"</DTS:PropertyExpression>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="195.5,354.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="195.5,150.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="195.5,662.5">
+          TopLeft="194.3,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

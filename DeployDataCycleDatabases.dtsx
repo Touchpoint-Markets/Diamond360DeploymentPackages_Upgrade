@@ -11,46 +11,10 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DeployDataCycleDatabases"
   DTS:PackageType="5"
-  DTS:VersionBuild="147"
-  DTS:VersionGUID="{7635FD38-2632-4DDA-80D9-6347B08C9FC4}">
+  DTS:VersionBuild="152"
+  DTS:VersionGUID="{1DE5E50B-AC6E-42D3-844E-224940AF90AA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINPSQL21]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}"
-      DTS:ObjectName="CINPSQL21">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.9.57.8;User ID=jdauser;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-DeployDataCycleDatabases-{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}CINPSQL21.NYC.AMLAW.CORP.jdauser;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACbS1KG/9fWSDsQlEfq2fjKxJjpo7kJKzwyvVh2o8k52AAAAAAOgAAAAAIAACAAAAA6pAd9+0uBeuJDy6gB2uyoUt9pzlGXATVrjIylxymhoSAAAAA8wnFzS/MvMVGADnBLbf9KyA2B/4Ah0uAX8vm/bHbjPUAAAACgVWwmpBtmzl2YqE6Zdrse8XsSRMXR5auIKjVP3kY2ypoo9TL2i847pzLeeRdCBIQQ49EAxoxcCL3Ov6KfccUG</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINVSQL24]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{6A28F843-5278-4C1F-8C4B-8F07991906F5}"
-      DTS:ObjectName="CINVSQL24">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.10.82.45;User ID=jdauser;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-DeployDataCycleDatabases-{6A28F843-5278-4C1F-8C4B-8F07991906F5}CINVSQL24.NYC.AMLAW.CORP.jdauser;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACFtZuKvcMRWE9V1xsOV09d6mtVe2tRg2voH7N5B4WwvwAAAAAOgAAAAAIAACAAAABcQfxki6JZ+3rtLlWzBRxbwg9ENuycC3o3eK/FjLdo+yAAAAAV3OfySY17ncXKqt18vPX1Moq47x7AN8C1wEz/UvV3RkAAAAA+0JASAPgOSnXjuLGRnIuTFU7F7S/gNy48WwDOQfC45Bgz7S6zy4gvwiQSf6T8KWQk99l2A1fIxL8l6Bo3dFyR</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -1025,15 +989,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="211.2,204"
-          Size="211.2,247.2"
+          PanelSize="210.4,204"
+          Size="210.4,247.2"
           Id="Package\Deployment Container\FreeERISA Databases\Diamond360_RawData"
-          TopLeft="5.50000000000004,5.50000000000003" />
+          TopLeft="7.166666575604,5.50000000000003" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="224,308"
-          Size="224,351.2"
+          PanelSize="220.8,308"
+          Size="220.8,351.2"
           Id="Package\Deployment Container\FreeERISA Databases"
           TopLeft="5.50000000000007,5.50000000000003" />
         <NodeLayout
@@ -1106,8 +1070,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="212,204"
-          Size="212,247.2"
+          PanelSize="206.4,204"
+          Size="206.4,247.2"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\GroupInsuranceExports"
           TopLeft="272.5,5.49999999999991" />
         <NodeLayout

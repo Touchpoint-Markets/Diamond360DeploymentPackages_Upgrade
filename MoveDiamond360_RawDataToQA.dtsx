@@ -11,43 +11,24 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MoveDiamond360_RawDataToQA"
   DTS:PackageType="5"
-  DTS:VersionBuild="233"
-  DTS:VersionGUID="{CA973782-6471-4978-A1B8-8F9958F517E8}">
+  DTS:VersionBuild="239"
+  DTS:VersionGUID="{2239438E-4092-469B-B48C-87106F6F219A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[CINPSQL20\PROCESSING]"
       DTS:CreationName="ADO.NET:SQL"
-      DTS:DTSID="{D6ED490A-8EE5-4B30-89E7-327ED005107B}"
+      DTS:DTSID="{5F8DEDFE-2242-4CCC-AC81-3EBDD75C0279}"
       DTS:ObjectName="CINPSQL20\PROCESSING">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Initial Catalog=master;Persist Security Info=True;Connect Timeout=30;Application Name=SSIS-MoveDiamond360ToQA-{D6ED490A-8EE5-4B30-89E7-327ED005107B}CINPSQL20\PROCESSING;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINPSQL20\PROCESSING.Diamond360_RawData]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{87BBACEF-B587-4635-91A5-EC7BEA7BD381}"
-      DTS:ObjectName="CINPSQL20\PROCESSING.Diamond360_RawData">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=CINPSQL20\PROCESSING;User ID=jdauser;Initial Catalog=Diamond360_RawData;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CINVSQL24]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{10B6F020-BF0C-4A33-9CD0-7A1222183C91}"
-      DTS:ObjectName="CINVSQL24">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=CINVSQL24;User ID=jdauser;Initial Catalog=Diamond360_RawData;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=10.9.60.43\processing;User ID=jdauser;Initial Catalog=;Integrated Security=False;Pooling=True;Min Pool Size=0;Max Pool Size=100;Connect Timeout=15;Encrypt=True;TrustServerCertificate=True;Packet Size=8000;Type System Version=Latest;Authentication=&quot;Sql Password&quot;;Application Name=&quot;Framework Microsoft SqlClient Data Provider&quot;;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADOVZ44GT8S0P1fpRY3v8YibqDxVjZNLsMcFsVFMdex0AAAAAAOgAAAAAIAACAAAACI4nkQlaneTRH6NRK7SUhyKgGkY4val1MQPDwQ36attCAAAAAbx9a1D0TOUqqr3z08DQOYwal2EaWCG6oMIoTlo4OrEkAAAADXixnn1xnZFRbWbl95hw3qz4JAqJH6uMU5SZ/FxMhkxqLKFT/iZYxCSTUm0QHYz5F/Ij/9smIQ7q2M6qvf/gWe</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -58,18 +39,6 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="\\SUNVWIN360DB02\amc\D360Backups\Diamond360_RawData_Backup.bak" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
-      DTS:CreationName="SMTP"
-      DTS:Description="SBMedia"
-      DTS:DTSID="{AA38AFE5-E1B1-4EC4-A308-C5039874B45A}"
-      DTS:ObjectName="SMTP Connection Manager">
-      <DTS:ObjectData>
-        <SmtpConnectionManager
-          ConnectionString="SmtpServer=smtp-relay.gmail.com;UseWindowsAuthentication=True;EnableSsl=True;"
-          ConnectByProxy="False" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -183,7 +152,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{D6ED490A-8EE5-4B30-89E7-327ED005107B}"
+              SQLTask:Connection="{5F8DEDFE-2242-4CCC-AC81-3EBDD75C0279}"
               SQLTask:SqlStatementSource="BACKUP DATABASE Diamond360_RawData&#xA;    TO DISK = '\\SUNVWIN360DB02\amc\D360Backups\Diamond360_RawData_Backup.bak'&#xA;WITH COMPRESSION"
               SQLTask:ServerVersion="9"
               SQLTask:ExtendedLogging="True"
@@ -222,8 +191,8 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{87BBACEF-B587-4635-91A5-EC7BEA7BD381}"
-              SQLTask:SqlStatementSource="DBCC SHRINKFILE (N'Diamond360_RawData' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'Diamond360_RawData' , 0, TRUNCATEONLY)&#xA;GO&#xA;&#xA;DBCC SHRINKFILE (N'Diamond360_RawData_log' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'Diamond360_RawData_log' , 0, TRUNCATEONLY)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:Connection="{EB5CF017-7B2D-4036-9DCF-D17FA04D16E9}"
+              SQLTask:SqlStatementSource="use Diamond360_RawData;&#xA;DBCC SHRINKFILE (N'Diamond360_RawData' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'Diamond360_RawData' , 0, TRUNCATEONLY)&#xA;GO&#xA;&#xA;DBCC SHRINKFILE (N'Diamond360_RawData_log' , 0, NOTRUNCATE)&#xA;DBCC SHRINKFILE (N'Diamond360_RawData_log' , 0, TRUNCATEONLY)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -280,6 +249,36 @@
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadWriteVariables="User::Diamond360_RawDataFileName,User::Diamond360_RawDataFilestreamName">
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -399,35 +398,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_32975033dfce48a1b108b37671d69815.Properties.Settings.get_Default():ST_32975033dfce48a1b108b37671d69815.Properties.Sett" +
-    "ings")]
-
-namespace ST_32975033dfce48a1b108b37671d69815.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ST_32975033dfce48a1b108b37671d69815.csproj"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -652,35 +622,34 @@ namespace ST_32975033dfce48a1b108b37671d69815
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
 
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_32975033dfce48a1b108b37671d69815.Properties.Settings.get_Default():ST_32975033dfce48a1b108b37671d69815.Properties.Sett" +
+    "ings")]
 
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+namespace ST_32975033dfce48a1b108b37671d69815.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="Properties\Settings.settings"
             Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -924,7 +893,7 @@ ALTER DATABASE Diamond360_RawData SET MULTI_USER
 GO"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{10B6F020-BF0C-4A33-9CD0-7A1222183C91}"
+              SQLTask:Connection="{6A28F843-5278-4C1F-8C4B-8F07991906F5}"
               SQLTask:SqlStatementSource="Use master&#xA;Go&#xA;ALTER DATABASE Diamond360_RawData SET SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;&#xA;RESTORE DATABASE Diamond360_RawData&#xA;FROM DISK = '\\SUNVWIN360DB02\amc\D360Backups\Diamond360_RawData_Backup.bak' WITH FILE = 1, &#xA;MOVE 'Diamond360_RawData' TO 'F:\Data\.mdf',&#xA;MOVE 'Diamond360_RawData_Log' TO 'F:\Log\.ldf' ,&#xA;NOUNLOAD, REPLACE&#xA;&#xA;ALTER DATABASE Diamond360_RawData SET MULTI_USER&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -956,6 +925,36 @@ GO"</DTS:PropertyExpression>
               VSTAMajorVersion="17"
               VSTAMinorVersion="0"
               Language="CSharp">
+              <ProjectItem
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_b3024ac85bcc4c98814bb21e6257a9fb")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_b3024ac85bcc4c98814bb21e6257a9fb")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1162,35 +1161,6 @@ GO"</DTS:PropertyExpression>
   </ProjectExtensions>
 </Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties.Settings.get_Default():ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties.Sett" +
-    "ings")]
-
-namespace ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Namespaces
 using System;
@@ -1341,35 +1311,34 @@ namespace ST_b3024ac85bcc4c98814bb21e6257a9fb
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
 
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_b3024ac85bcc4c98814bb21e6257a9fb")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_b3024ac85bcc4c98814bb21e6257a9fb")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties.Settings.get_Default():ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties.Sett" +
+    "ings")]
 
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+namespace ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Settings.settings"
                 Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -1646,7 +1615,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{10B6F020-BF0C-4A33-9CD0-7A1222183C91}"
+          SQLTask:Connection="{6A28F843-5278-4C1F-8C4B-8F07991906F5}"
           SQLTask:SqlStatementSource="USE [Diamond360_RawData]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'EINAdmin')&#xA;DROP USER [EINAdmin]&#xA;GO&#xA;&#xA;CREATE USER [EINAdmin] FOR LOGIN [EINAdmin] WITH DEFAULT_SCHEMA=[EINAdmin]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'EINFinder')&#xA;DROP USER [EINFinder]&#xA;GO&#xA;&#xA;CREATE USER [EINFinder] FOR LOGIN [EINFinder] WITH DEFAULT_SCHEMA=[EINFinder]&#xA;GO&#xA;&#xA;ALTER ROLE [db_owner] ADD MEMBER [EINFinder] &#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'jdauser')&#xA;DROP USER [jdauser]&#xA;GO&#xA;&#xA;CREATE USER [jdauser] FOR LOGIN [jdauser] WITH DEFAULT_SCHEMA=[jdauser]&#xA;GO&#xA;&#xA;ALTER ROLE [db_owner] ADD MEMBER [jdauser]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1708,29 +1677,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         <NodeLayout
           Size="224,41.6"
           Id="Package\Create New Backups\Backup Diamond360_RawData"
-          TopLeft="5.50000000000003,209.5" />
+          TopLeft="5.50000000000003,208.7" />
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\Create New Backups\Database Optimization"
-          TopLeft="25,107.5" />
+          TopLeft="25.1,107.1" />
         <NodeLayout
           Size="132.8,41.6"
           Id="Package\Create New Backups\Shrink Files"
-          TopLeft="51,5.5" />
+          TopLeft="51.1,5.49999999999995" />
         <EdgeLayout
           Id="Package\Create New Backups.PrecedenceConstraints[Constraint]"
-          TopLeft="117.5,47.5">
+          TopLeft="117.5,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1741,7 +1710,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Create New Backups.PrecedenceConstraints[Constraint 1]"
-          TopLeft="117.5,149.5">
+          TopLeft="117.5,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1764,58 +1733,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="235.2,307.2"
-          Size="235.2,350.4"
+          PanelSize="235.2,305.6"
+          Size="235.2,348.8"
           Id="Package\Create New Backups"
-          TopLeft="78,107.5" />
+          TopLeft="76.7,107.1" />
         <NodeLayout
-          Size="276,41.6"
+          Size="275.2,41.6"
           Id="Package\Delete Old Diamond360_RawData Backup"
-          TopLeft="57.5,5.5" />
+          TopLeft="56.7,5.49999999999995" />
         <NodeLayout
-          Size="380,41.6"
+          Size="377.6,41.6"
           Id="Package\Get Current Date Time To Tack Onto End Of MDF And LDF Files"
-          TopLeft="5.50000000000006,517.5" />
+          TopLeft="5.50000000000009,515.9" />
         <NodeLayout
           Size="260,41.6"
           Id="Package\Restore Backups\Restore Diamond360_RawData On QA"
-          TopLeft="5.5,5.5" />
+          TopLeft="5.5,5.50000000000007" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="271.2,103.2"
+          PanelSize="271.2,102.4"
           Size="271.2,145.6"
           Id="Package\Restore Backups"
-          TopLeft="60.0000000000001,619.5" />
+          TopLeft="58.7000000000001,617.5" />
         <NodeLayout
           Size="160,41.6"
           Id="Package\Sequence Container\Pull And Email Test Records"
-          TopLeft="10,5.5" />
+          TopLeft="5.5,5.49999999999995" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="180,204.8"
-          Size="180,248"
+          PanelSize="171.2,102.4"
+          Size="171.2,145.6"
           Id="Package\Sequence Container"
-          TopLeft="105.5,927.5" />
+          TopLeft="108.7,924.7" />
         <NodeLayout
           Size="188.8,41.6"
           Id="Package\Setup EINFinder Logins"
-          TopLeft="101,825.5" />
+          TopLeft="99.9000000000001,823.1" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="195.5,457.5">
+          TopLeft="194.3,455.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1826,7 +1795,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="195.5,47.5">
+          TopLeft="194.3,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1848,18 +1817,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="195.5,867.5">
+          TopLeft="194.3,864.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1870,18 +1839,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="195.5,559.5">
+          TopLeft="194.3,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1892,18 +1861,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="195.5,765.5">
+          TopLeft="194.3,763.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

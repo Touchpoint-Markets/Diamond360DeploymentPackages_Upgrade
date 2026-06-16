@@ -98,52 +98,6 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{55E1DB9B-B3E9-4D8F-9C2A-583122BAAE58}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailBody">
-      <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{017CF1ED-F0F8-4C57-9D86-62FD9DCDC613}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailCC">
-      <DTS:VariableValue
-        DTS:DataType="8">kveltri@alm.com,rlubke@alm.com,eryles@alm.com,hvaghasiya@synoptek.com,harshah@synoptek.com</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{14238143-A3DD-4A09-97CA-8EBB8CA80FAA}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailFrom">
-      <DTS:VariableValue
-        DTS:DataType="8">FreeERISA@alm.com</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{90A6CAAB-8C22-42C8-A360-64B877F74DBB}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailSubject">
-      <DTS:VariableValue
-        DTS:DataType="8">New FreeERISA Data Cycle Sample ACK IDs </DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{209B5B6C-C027-4A6B-85A5-B570300F6FCA}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailTo">
-      <DTS:VariableValue
-        DTS:DataType="8">harshah@synoptek.com</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
       DTS:DTSID="{6F7A8B9C-0D1E-2F3A-4B5C-6D7E8F9A0B1C}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"

@@ -18,34 +18,6 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{52718E3E-D0F7-41C7-A8BD-9AF24D66520F}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="Diamond360DataDrive">
-      <DTS:VariableValue
-        DTS:DataType="8">E</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{EC3AFDD9-835E-4FBC-BFBC-B40A1F02B008}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="Diamond360FileName">
-      <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{7F60FD16-A83F-4376-A03A-1CB98D48FB45}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="Diamond360LogDrive">
-      <DTS:VariableValue
-        DTS:DataType="8">F</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
       DTS:DTSID="{4A42F81B-2D11-4AB8-B958-84F3D525B62D}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"

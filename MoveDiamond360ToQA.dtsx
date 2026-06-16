@@ -88,52 +88,6 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F99B24E8-7685-4AA4-9741-DDEF3C7974A2}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailBody">
-      <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{72995331-A1B3-4312-BE1E-DE9BAC71452E}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailCC">
-      <DTS:VariableValue
-        DTS:DataType="8">kveltri@alm.com,rlubke@alm.com,eryles@alm.com,hvaghasiya@synoptek.com,harshah@synoptek.com</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{EA7753EF-4DEA-4CF5-81EE-49BC3C0C3FFB}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailFrom">
-      <DTS:VariableValue
-        DTS:DataType="8">Prospector@alm.com</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{56AB03D1-8645-4513-9618-B319A6232C33}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailSubject">
-      <DTS:VariableValue
-        DTS:DataType="8">New Prospector Data Cycle Sample ACK IDs </DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{E285A8BE-1271-404E-998A-7D4F54E3E67C}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="HtmlEmailTo">
-      <DTS:VariableValue
-        DTS:DataType="8">harshah@synoptek.com</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
       DTS:DTSID="{3C4D5E6F-7A8B-9C0D-1E2F-3A4B5C6D7E8F}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"

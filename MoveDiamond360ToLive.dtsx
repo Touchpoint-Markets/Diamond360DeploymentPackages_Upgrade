@@ -15,18 +15,7 @@
   DTS:VersionGUID="{DCBB8FF7-1045-4D17-9E76-08E6BBB2D73B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Diamond360_Backup.bak]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{C8603B2C-C78B-4D36-A17E-42733C101EAB}"
-      DTS:ObjectName="Diamond360_Backup.bak">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="\\sunvwin360db02\amc\D360Backups\Diamond360_Backup.bak" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
+  <DTS:ConnectionManagers />
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""

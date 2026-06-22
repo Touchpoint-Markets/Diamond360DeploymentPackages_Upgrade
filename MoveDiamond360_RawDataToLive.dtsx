@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MoveDiamond360_RawDataToLive"
   DTS:PackageType="5"
-  DTS:VersionBuild="113"
-  DTS:VersionGUID="{892D594B-9611-45C0-9D43-1C8C3B63CC09}">
+  DTS:VersionBuild="114"
+  DTS:VersionGUID="{13362E69-1BFF-4A45-B7FF-F67FADB67244}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -70,7 +70,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}"
-          SQLTask:SqlStatementSource="IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;EXEC msdb.dbo.sp_delete_database_backuphistory @database_name = N'Diamond360_RawData_Old'&#xA;GO&#xA;USE [master]&#xA;GO&#xA;IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;ALTER DATABASE [Diamond360_RawData_Old] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;GO&#xA;USE [master]&#xA;GO&#xA;IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;DROP DATABASE [Diamond360_RawData_Old]&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="ALTER DATABASE [Diamond360_RawData_Old]&#xA;SET FILESTREAM&#xA;(&#xA;    NON_TRANSACTED_ACCESS = OFF,&#xA;    DIRECTORY_NAME = NULL&#xA;);&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;EXEC msdb.dbo.sp_delete_database_backuphistory @database_name = N'Diamond360_RawData_Old'&#xA;GO&#xA;USE [master]&#xA;GO&#xA;IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;ALTER DATABASE [Diamond360_RawData_Old] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;GO&#xA;USE [master]&#xA;GO&#xA;IF  EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'Diamond360_RawData_Old')&#xA;DROP DATABASE [Diamond360_RawData_Old]&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -91,14 +91,35 @@
           Language="CSharp"
           ReadWriteVariables="User::Diamond360_RawDataFileName,User::Diamond360_RawDataFilestreamName">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -471,35 +492,14 @@ namespace ST_32975033dfce48a1b108b37671d69815.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------

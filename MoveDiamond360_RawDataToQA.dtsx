@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MoveDiamond360_RawDataToQA"
   DTS:PackageType="5"
-  DTS:VersionBuild="250"
-  DTS:VersionGUID="{A33F9C42-FFFA-4BA8-93FA-AACF930F6EA3}">
+  DTS:VersionBuild="256"
+  DTS:VersionGUID="{74F86344-DF9C-42A8-A1EB-2850D2F57A22}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,12 +23,7 @@
       DTS:ObjectName="CINPSQL20\PROCESSING">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=10.9.60.43\processing;User ID=jdauser;Initial Catalog=;Integrated Security=False;Pooling=True;Min Pool Size=0;Max Pool Size=100;Connect Timeout=15;Encrypt=True;TrustServerCertificate=True;Packet Size=8000;Type System Version=Latest;Authentication=&quot;Sql Password&quot;;Application Name=&quot;Framework Microsoft SqlClient Data Provider&quot;;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABY+KTElSplcWn7/i3CzV85JwQWwmAzwOW/BJ9jrn6dXQAAAAAOgAAAAAIAACAAAABrcrrHTSO+7CLJOobEEnsa/OlG4EFrDTUXiYjK4ChIBSAAAAAJ39VoOkFizdeUlGSsVFkE4q5AFvDH5DQmn3holNsIK0AAAADOrExTRz16b0Jol+YD0ne/iL+VjS5x0CS8SxF5T2k7CnbHz4iAnhcj7+8CbDJM5w26DgoVYH3J+0nSHoTaaoOr</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=10.9.60.43\processing;User ID=jdauser;Initial Catalog=;Integrated Security=False;Pooling=True;Min Pool Size=0;Max Pool Size=100;Connect Timeout=15;Encrypt=True;TrustServerCertificate=True;Packet Size=8000;Type System Version=Latest;Authentication=&quot;Sql Password&quot;;Application Name=&quot;Framework Microsoft SqlClient Data Provider&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -38,12 +33,7 @@
       DTS:ObjectName="Diamond360_RawData">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=10.9.60.43\processing;User ID=jdauser;Initial Catalog=Diamond360_RawData;Persist Security Info=True;TrustServerCertificate=True;Application Name=SSIS-MoveDiamond360ToQA-{3ED47EFB-1823-40C0-B0EA-71713ECC11B6}10.9.60.43\processing.Diamond360.jdauser2;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg891u4hqXkyEyRvKd79XqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAgZyACFTnHDMmzQ030mE84vTroTJ86eTHXmC/Z+lzbFgAAAAAOgAAAAAIAACAAAABG0zr5C2Kl32FFDa5wx2qj6BJpiypiSbN+f+7NK0os0yAAAACYmGw3/MSCWFcb3PGdpcLJzWaOKAZns+wskNpMekPvEUAAAAADu66alUzH1b8k+zea1IbTGwuzWAKvdN6k4gejbR0Ap80E4TdQerMaPMVVR1rlr6xnXVikHrmmuU6WsgDH4BpW</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=10.9.60.43\processing;User ID=jdauser;Initial Catalog=Diamond360_RawData;Persist Security Info=True;TrustServerCertificate=True;Application Name=SSIS-MoveDiamond360ToQA-{3ED47EFB-1823-40C0-B0EA-71713ECC11B6}10.9.60.43\processing.Diamond360.jdauser2;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -65,7 +55,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Diamond360_RawDataDataDrive">
       <DTS:VariableValue
-        DTS:DataType="8">F:</DTS:VariableValue>
+        DTS:DataType="8">F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -79,22 +69,12 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{1766876E-596A-40FE-8614-7FB1852A80B2}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="Diamond360_RawDataFilestreamName">
-      <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
       DTS:DTSID="{4F9845EE-4A0B-4F6D-97BD-0DD78E7B8FC3}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="Diamond360_RawDataLogDrive">
       <DTS:VariableValue
-        DTS:DataType="8">F:</DTS:VariableValue>
+        DTS:DataType="8">F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -148,7 +128,6 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{5F8DEDFE-2242-4CCC-AC81-3EBDD75C0279}"
               SQLTask:SqlStatementSource="BACKUP DATABASE Diamond360_RawData&#xA;    TO DISK = '\\SUNVWIN360DB02\amc\D360Backups\Diamond360_RawData_Backup.bak'&#xA;WITH COMPRESSION"
               SQLTask:ServerVersion="9"
               SQLTask:ExtendedLogging="True"
@@ -244,16 +223,7 @@
           VSTAMajorVersion="17"
           VSTAMinorVersion="0"
           Language="CSharp"
-          ReadWriteVariables="User::Diamond360_RawDataFileName,User::Diamond360_RawDataFilestreamName">
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+          ReadWriteVariables="User::Diamond360_RawDataFileName">
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -373,6 +343,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_32975033dfce48a1b108b37671d69815.Properties.Settings.get_Default():ST_32975033dfce48a1b108b37671d69815.Properties.Sett" +
+    "ings")]
+
+namespace ST_32975033dfce48a1b108b37671d69815.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="ST_32975033dfce48a1b108b37671d69815.csproj"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -555,7 +554,7 @@ namespace ST_32975033dfce48a1b108b37671d69815
 		{
 			// TODO: Add your code here
             Dts.Variables["Diamond360_RawDataFileName"].Value = String.Format("Diamond360_RawData_{0}_{1}_{2}_{3}_{4}_{5}", DateTime.Now.Month.ToString(), DateTime.Now.Day.ToString(), DateTime.Now.Year.ToString(), DateTime.Now.Hour.ToString(), DateTime.Now.Minute.ToString(), DateTime.Now.Second.ToString());
-            Dts.Variables["Diamond360_RawDataFilestreamName"].Value = String.Format("SummitFileStream_{0}_{1}_{2}_{3}_{4}_{5}", DateTime.Now.Month.ToString(), DateTime.Now.Day.ToString(), DateTime.Now.Year.ToString(), DateTime.Now.Hour.ToString(), DateTime.Now.Minute.ToString(), DateTime.Now.Second.ToString());
+            //Dts.Variables["Diamond360_RawDataFilestreamName"].Value = String.Format("SummitFileStream_{0}_{1}_{2}_{3}_{4}_{5}", DateTime.Now.Month.ToString(), DateTime.Now.Day.ToString(), DateTime.Now.Year.ToString(), DateTime.Now.Hour.ToString(), DateTime.Now.Minute.ToString(), DateTime.Now.Second.ToString());
            
 			Dts.TaskResult = (int)ScriptResults.Success;
 		}
@@ -584,7 +583,7 @@ namespace ST_32975033dfce48a1b108b37671d69815
     <msb:CodeName>ST_32975033dfce48a1b108b37671d69815</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_32975033dfce48a1b108b37671d69815</msb:DisplayName>
-    <msb:ProjectId>{5CAC6208-D63B-49F0-B2EB-EEA62A073BF4}</msb:ProjectId>
+    <msb:ProjectId>{D9660221-5A6E-4506-A05D-79208FCD0C37}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_32975033dfce48a1b108b37671d69815.csproj" />
@@ -596,35 +595,6 @@ namespace ST_32975033dfce48a1b108b37671d69815
     <msb:File Include="ScriptMain.cs" />
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_32975033dfce48a1b108b37671d69815.Properties.Settings.get_Default():ST_32975033dfce48a1b108b37671d69815.Properties.Sett" +
-    "ings")]
-
-namespace ST_32975033dfce48a1b108b37671d69815.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
@@ -655,6 +625,15 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -726,121 +705,112 @@ namespace ST_32975033dfce48a1b108b37671d69815.Properties {
           <BinaryItem
             Name="ST_32975033dfce48a1b108b37671d69815.dll">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
-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
+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
-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
+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
-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
+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
-ACgZAAAKCxIBKBUAAAqiJRsoEwAACgoSACgaAAAKCxIBKBUAAAqiKBsAAApvHAAACgIoEAAACm8R
-AAAKco0AAHBvEgAACnLPAABwHI0SAAABJRYoEwAACgoSACgUAAAKCxIBKBUAAAqiJRcoEwAACgoS
-ACgWAAAKCxIBKBUAAAqiJRgoEwAACgoSACgXAAAKCxIBKBUAAAqiJRkoEwAACgoSACgYAAAKCxIB
-KBUAAAqiJRooEwAACgoSACgZAAAKCxIBKBUAAAqiJRsoEwAACgoSACgaAAAKCxIBKBUAAAqiKBsA
-AApvHAAACgIoEAAAChZvHQAACioeAigeAAAKKh4CKB8AAAoqrn4BAAAELR5yIQEAcNADAAACKCAA
-AApvIQAACnMiAAAKgAEAAAR+AQAABCoafgIAAAQqHgKAAgAABCoafgMAAAQqHgIoIwAACioucwgA
-AAaAAwAABCoAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAAAQAACN+AABsBAAA
-tAUAACNTdHJpbmdzAAAAACAKAACUAQAAI1VTALQLAAAQAAAAI0dVSUQAAADECwAAeAEAACNCbG9i
-AAAAAAAAAAIAAAFXHaIBCQMAAAD6ATMAFgAAAQAAACAAAAAFAAAABgAAAAkAAAABAAAAIwAAAAIA
-AAAQAAAAAQAAAAIAAAADAAAABAAAAAEAAAAEAAAAAQAAAAEAAAAAAKQDAQAAAAAABgA/AoYEBgDO
-AoYEBgCLAXMEDwD6BAAABgC4ASIEBgAiAiIEBgADAiIEBgC1AiIEBgBfAiIEBgB4AiIEBgDPASIE
-BgDqAQcDCgCTAlMDCgAKAVMDBgCsANUDBgDcA9UDBgBuAXMEBgB0BdUDBgBNBKYEBgA0BA0EDgA+
-AY4DDgCfAY4DDgAmAfgDBgBTAYYECgB8A1MDEgA8BbUAEgB/ALUABgABANUDBgAjA9UDBgDVANUD
-BgCIANUDBgCqBSIEAAAAACsAAAAAAAEAAQABABAA7QMHADkAAQABAAAAEACtBAkFSQABAAMAAAEQ
-AEYFCQVdAAMABwADAQAAXwUAAEEABAAKABEA4QN7ABEA+gB/ABEAbwCDAAYGUwCHAFaATwWKAFaA
-2gCKAFAgAAAAAIYA8wMGAAEA3SEAAAAAhhhdBAYAAQDlIQAAAACDGF0EBgABAO0hAAAAAJMISQSO
-AAEAGSIAAAAAkwjiAJMAAQAgIgAAAACTCO4AmAABACgiAAAAAJYIewWeAAIALyIAAAAAhhhdBAYA
-AgA3IgAAAACRGGMEowACAAAAAQABAwkAXQQBABEAXQQGABkAXQQKACkAXQQQADEAXQQQADkAXQQQ
-AEEAXQQQAEkAXQQQAFEAXQQQAFkAXQQQAGEAXQQQAGkAXQQGAIkAXQQGALEAXQQVAMEAXQQGAHEA
-VwUhAMkAOAUmANEAzAMrAHkAlgUxAHkAKgM2AOEAIQM6AHkAngU2AHkAQAQ2AHkAagQ2AHkA7AI2
-AHkAZAA2AOkAbQU+ANkA9wJFAMkAhwUBAHEAXQQGAJEAXQQGAPEAmgBKAPEApgVRAJkAXQRXALkA
-XQQGAAgAFABxAAgAGAB2ACkAcwDeAC4ACwC2AC4AEwC/AC4AGwDeAC4AIwDnAC4AKwAQAS4AMwAQ
-AS4AOwAQAS4AQwDnAC4ASwAWAS4AUwAQAS4AWwAtAUMAYwB2AEkAcwDeAGEAewB2AGMAawB2ABsA
-AwABAAQAAwAAAE0EpwAAAAIBrAAAAH8FsQACAAQAAwACAAUABQABAAYABQACAAcABwAEgAAAAQAA
-AL4lhFwAAAAAAAAHAAAABAAAAAAAAAAAAAAAXwBbAAAAAAARAAAAAAAAAAAAAABoADQDAAAAAAQA
-AAAAAAAAAAAAAF8A1QMAAAAAEQAAAAAAAAAAAAAAaAA0AAAAAAAAAAAAAQAAALcEAAAFAAIAAAAA
-AABJbnQzMgBTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgxNQA8TW9kdWxlPgBNaWNy
-b3NvZnQuU3FsU2VydmVyLk1hbmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBnZXRfU2Vjb25kAGRl
-ZmF1bHRJbnN0YW5jZQBWYXJpYWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRs
-ZQBEYXRlVGltZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5SdW50aW1lAFR5cGUARmFpbHVyZQBn
-ZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAVlNUQVJUU2NyaXB0T2JqZWN0
-TW9kZWxCYXNlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENv
-bXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVi
-dWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0
-dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1
-dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRy
-aWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRy
-aWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRyeVBvaW50
-QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0
-dHJpYnV0ZQBnZXRfTWludXRlAHNldF9WYWx1ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9u
-aW5nAFRvU3RyaW5nAGdldF9Nb250aABNaWNyb3NvZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sATWlj
-cm9zb2Z0LlNxbFNlcnZlci5EdHMuVGFza3MuU2NyaXB0VGFzawBTY3JpcHRPYmplY3RNb2RlbABT
-eXN0ZW0uQ29tcG9uZW50TW9kZWwAU1RfMzI5NzUwMzNkZmNlNDhhMWIxMDhiMzc2NzFkNjk4MTUu
-ZGxsAGdldF9JdGVtAFN5c3RlbQBFbnVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNv
-bmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24AQ3VsdHVy
-ZUluZm8AZ2V0X1llYXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAZ2V0X0hvdXIA
-U3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVt
-LlJlc291cmNlcwBTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgxNS5Qcm9wZXJ0aWVz
-LlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU1RfMzI5NzUwMzNkZmNlNDhhMWIx
-MDhiMzc2NzFkNjk4MTUuUHJvcGVydGllcwBnZXRfVmFyaWFibGVzAFNldHRpbmdzAFN1Y2Nlc3MA
-Z2V0X0R0cwBTY3JpcHRSZXN1bHRzAEZvcm1hdABPYmplY3QAZ2V0X0RlZmF1bHQAc2V0X1Rhc2tS
-ZXN1bHQAZ2V0X05vdwBnZXRfRGF5AGdldF9Bc3NlbWJseQAAADVEAGkAYQBtAG8AbgBkADMANgAw
-AF8AUgBhAHcARABhAHQAYQBGAGkAbABlAE4AYQBtAGUAAFVEAGkAYQBtAG8AbgBkADMANgAwAF8A
-UgBhAHcARABhAHQAYQBfAHsAMAB9AF8AewAxAH0AXwB7ADIAfQBfAHsAMwB9AF8AewA0AH0AXwB7
-ADUAfQAAQUQAaQBhAG0AbwBuAGQAMwA2ADAAXwBSAGEAdwBEAGEAdABhAEYAaQBsAGUAcwB0AHIA
-ZQBhAG0ATgBhAG0AZQAAUVMAdQBtAG0AaQB0AEYAaQBsAGUAUwB0AHIAZQBhAG0AXwB7ADAAfQBf
-AHsAMQB9AF8AewAyAH0AXwB7ADMAfQBfAHsANAB9AF8AewA1AH0AAHFTAFQAXwAzADIAOQA3ADUA
-MAAzADMAZABmAGMAZQA0ADgAYQAxAGIAMQAwADgAYgAzADcANgA3ADEAZAA2ADkAOAAxADUALgBQ
-AHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAABnsY39b8ihT6zKEZEK2qM8
-AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFVBQcCET0IBCAAEmUEIAASaQUgARJtHAQAABE9AyAA
-CAMgAA4GAAIODh0cBCABARwGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEE
-AAAAAAQBAAAAAwYSTQMGElEDBhIQAgYIAwYRFAQAABJNBAAAElEFAAEBElEEAAASEAMAAAEECAAS
-TQQIABJRBAgAEhAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAA
-AAAAKAEAI1NUXzMyOTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1AAAFAQAAAAAWAQARQ29w
-eXJpZ2h0IEAgIDIwMTMAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3
-b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43ALQAAADOyu++AQAAAJEAAABsU3lzdGVt
-LlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3Vs
-dHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNv
-dXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAABgMAAAAAAAAAAA
-AAB6MAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbDAAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBt
-c2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ACgZAAAKCxIBKBUAAAqiJRsoEwAACgoSACgaAAAKCxIBKBUAAAqiKBsAAApvHAAACgIoEAAAChZv
+HQAACioeAigeAAAKKh4CKB8AAAoqrn4BAAAELR5yjQAAcNADAAACKCAAAApvIQAACnMiAAAKgAEA
+AAR+AQAABCoafgIAAAQqHgKAAgAABCoafgMAAAQqHgIoIwAACioucwgAAAaAAwAABCoAAABCU0pC
+AQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAAABAAAI34AAGwEAAC0BQAAI1N0cmluZ3MA
+AAAAIAoAAAABAAAjVVMAIAsAABAAAAAjR1VJRAAAADALAAB4AQAAI0Jsb2IAAAAAAAAAAgAAAVcd
+ogEJAwAAAPoBMwAWAAABAAAAIAAAAAUAAAAGAAAACQAAAAEAAAAjAAAAAgAAABAAAAABAAAAAgAA
+AAMAAAAEAAAAAQAAAAQAAAABAAAAAQAAAAAApAMBAAAAAAAGAD8ChgQGAM4ChgQGAIsBcwQPAPoE
+AAAGALgBIgQGACICIgQGAAMCIgQGALUCIgQGAF8CIgQGAHgCIgQGAM8BIgQGAOoBBwMKAJMCUwMK
+AAoBUwMGAKwA1QMGANwD1QMGAG4BcwQGAHQF1QMGAE0EpgQGADQEDQQOAD4BjgMOAJ8BjgMOACYB
++AMGAFMBhgQKAHwDUwMSADwFtQASAH8AtQAGAAEA1QMGACMD1QMGANUA1QMGAIgA1QMGAKoFIgQA
+AAAAKwAAAAAAAQABAAEAEADtAwcAOQABAAEAAAAQAK0ECQVJAAEAAwAAARAARgUJBV0AAwAHAAMB
+AABfBQAAQQAEAAoAEQDhA3sAEQD6AH8AEQBvAIMABgZTAIcAVoBPBYoAVoDaAIoAUCAAAAAAhgDz
+AwYAAQAjIQAAAACGGF0EBgABACshAAAAAIMYXQQGAAEAMyEAAAAAkwhJBI4AAQBfIQAAAACTCOIA
+kwABAGYhAAAAAJMI7gCYAAEAbiEAAAAAlgh7BZ4AAgB1IQAAAACGGF0EBgACAH0hAAAAAJEYYwSj
+AAIAAAABAAEDCQBdBAEAEQBdBAYAGQBdBAoAKQBdBBAAMQBdBBAAOQBdBBAAQQBdBBAASQBdBBAA
+UQBdBBAAWQBdBBAAYQBdBBAAaQBdBAYAiQBdBAYAsQBdBBUAwQBdBAYAcQBXBSEAyQA4BSYA0QDM
+AysAeQCWBTEAeQAqAzYA4QAhAzoAeQCeBTYAeQBABDYAeQBqBDYAeQDsAjYAeQBkADYA6QBtBT4A
+2QD3AkUAyQCHBQEAcQBdBAYAkQBdBAYA8QCaAEoA8QCmBVEAmQBdBFcAuQBdBAYACAAUAHEACAAY
+AHYAKQBzAN4ALgALALYALgATAL8ALgAbAN4ALgAjAOcALgArABABLgAzABABLgA7ABABLgBDAOcA
+LgBLABYBLgBTABABLgBbAC0BQwBjAHYASQBzAN4AYQB7AHYAYwBrAHYAGwADAAEABAADAAAATQSn
+AAAAAgGsAAAAfwWxAAIABAADAAIABQAFAAEABgAFAAIABwAHAASAAAABAAAA7CUYcgAAAAAAAAcA
+AAAEAAAAAAAAAAAAAABfAFsAAAAAABEAAAAAAAAAAAAAAGgANAMAAAAABAAAAAAAAAAAAAAAXwDV
+AwAAAAARAAAAAAAAAAAAAABoADQAAAAAAAAAAAABAAAAtwQAAAUAAgAAAAAAAEludDMyAFNUXzMy
+OTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1ADxNb2R1bGU+AE1pY3Jvc29mdC5TcWxTZXJ2
+ZXIuTWFuYWdlZERUUwB2YWx1ZV9fAG1zY29ybGliAGdldF9TZWNvbmQAZGVmYXVsdEluc3RhbmNl
+AFZhcmlhYmxlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAERhdGVUaW1lAE1p
+Y3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAVHlwZQBGYWlsdXJlAGdldF9DdWx0dXJlAHNl
+dF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UAQXBw
+bGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0
+ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmli
+dXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2Vt
+Ymx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNv
+bmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxh
+dGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJs
+eUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0VGFza0VudHJ5UG9pbnRBdHRyaWJ1dGUAQXNz
+ZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAGdldF9N
+aW51dGUAc2V0X1ZhbHVlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAVG9TdHJpbmcA
+Z2V0X01vbnRoAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuU2NyaXB0VGFzawBNaWNyb3NvZnQuU3FsU2Vy
+dmVyLkR0cy5UYXNrcy5TY3JpcHRUYXNrAFNjcmlwdE9iamVjdE1vZGVsAFN5c3RlbS5Db21wb25l
+bnRNb2RlbABTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgxNS5kbGwAZ2V0X0l0ZW0A
+U3lzdGVtAEVudW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBT
+eXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBDdWx0dXJlSW5mbwBnZXRfWWVh
+cgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBnZXRfSG91cgBTeXN0ZW0uRGlhZ25v
+c3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNU
+XzMyOTc1MDMzZGZjZTQ4YTFiMTA4YjM3NjcxZDY5ODE1LlByb3BlcnRpZXMuUmVzb3VyY2VzLnJl
+c291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgx
+NS5Qcm9wZXJ0aWVzAGdldF9WYXJpYWJsZXMAU2V0dGluZ3MAU3VjY2VzcwBnZXRfRHRzAFNjcmlw
+dFJlc3VsdHMARm9ybWF0AE9iamVjdABnZXRfRGVmYXVsdABzZXRfVGFza1Jlc3VsdABnZXRfTm93
+AGdldF9EYXkAZ2V0X0Fzc2VtYmx5AAAANUQAaQBhAG0AbwBuAGQAMwA2ADAAXwBSAGEAdwBEAGEA
+dABhAEYAaQBsAGUATgBhAG0AZQAAVUQAaQBhAG0AbwBuAGQAMwA2ADAAXwBSAGEAdwBEAGEAdABh
+AF8AewAwAH0AXwB7ADEAfQBfAHsAMgB9AF8AewAzAH0AXwB7ADQAfQBfAHsANQB9AABxUwBUAF8A
+MwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3ADYANwAxAGQANgA5
+ADgAMQA1AC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAcXFhQuJq
+j0CGqJoFRwfvBwAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERVQUHAhE9CAQgABJlBCAAEmkFIAES
+bRwEAAARPQMgAAgDIAAOBgACDg4dHAQgAQEcBgABEnkRfQUgABKAgQcgAgEOEoCBCLd6XFYZNOCJ
+CImEXc2AgMyRBAAAAAAEAQAAAAMGEk0DBhJRAwYSEAIGCAMGERQEAAASTQQAABJRBQABARJRBAAA
+EhADAAABBAgAEk0ECAASUQQIABIQCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhy
+b3dzAQgBAAIAAAAAACgBACNTVF8zMjk3NTAzM2RmY2U0OGExYjEwOGIzNzY3MWQ2OTgxNQAABQEA
+AAAAFgEAEUNvcHlyaWdodCBAICAyMDEzAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcB
+AFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwC0AAAAzsrvvgEAAACR
+AAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQu
+MC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNT
+eXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA
+FC8AAAAAAAAAAAAALi8AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAvAAAAAAAAAAAAAAAAX0Nv
+ckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAA
+AABIAAAAWEAAABoEAAAAAAAAAAAAABoENAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBP
+AAAAAAC9BO/+AAABAAAAAQAYcuwlAAABABhy7CU/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
+RAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBv
+AG4AAAAAAAAAsAR6AwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAABWAwAAAQAwADAA
+MAAwADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABh
+AG4AeQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4A
+AAAAAFMAVABfADMAMgA5ADcANQAwADMAMwBkAGYAYwBlADQAOABhADEAYgAxADAAOABiADMANwA2
+ADcAMQBkADYAOQA4ADEANQAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAA
+LgA5ADcAMAA4AC4AMgA5ADIAMAA4AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAA
+AFMAVABfADMAMgA5ADcANQAwADMAMwBkAGYAYwBlADQAOABhADEAYgAxADAAOABiADMANwA2ADcA
+MQBkADYAOQA4ADEANQAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0
+AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAAIAAyADAAMQAzAAAAKgABAAEATABlAGcAYQBsAFQA
+cgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBu
+AGEAbQBlAAAAUwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIA
+MwA3ADYANwAxAGQANgA5ADgAMQA1AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBt
+AGUAAAAAAFMAVABfADMAMgA5ADcANQAwADMAMwBkAGYAYwBlADQAOABhADEAYgAxADAAOABiADMA
+NwA2ADcAMQBkADYAOQA4ADEANQAAAEIADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAA
+ADEALgAwAC4AOQA3ADAAOAAuADIAOQAyADAAOAAAAAAARgAPAAEAQQBzAHMAZQBtAGIAbAB5ACAA
+VgBlAHIAcwBpAG8AbgAAADEALgAwAC4AOQA3ADAAOAAuADIAOQAyADAAOAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
-AEgAAABYQAAAGgQAAAAAAAAAAAAAGgQ0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
-AAAAAL0E7/4AAAEAAAABAIRcviUAAAEAhFy+JT8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
-AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
-bgAAAAAAAACwBHoDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAFYDAAABADAAMAAw
-ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEA
-bgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAA
-AAAAUwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3ADYA
-NwAxAGQANgA5ADgAMQA1AAAAPgAPAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAu
-ADkANgA2ADIALgAyADMANgA4ADQAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAA
-UwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3ADYANwAx
-AGQANgA5ADgAMQA1AC4AZABsAGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQA
-AABDAG8AcAB5AHIAaQBnAGgAdAAgAEAAIAAgADIAMAAxADMAAAAqAAEAAQBMAGUAZwBhAGwAVABy
-AGEAZABlAG0AYQByAGsAcwAAAAAAAAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4A
-YQBtAGUAAABTAFQAXwAzADIAOQA3ADUAMAAzADMAZABmAGMAZQA0ADgAYQAxAGIAMQAwADgAYgAz
-ADcANgA3ADEAZAA2ADkAOAAxADUALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0A
-ZQAAAAAAUwBUAF8AMwAyADkANwA1ADAAMwAzAGQAZgBjAGUANAA4AGEAMQBiADEAMAA4AGIAMwA3
-ADYANwAxAGQANgA5ADgAMQA1AAAAQgAPAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAA
-MQAuADAALgA5ADYANgAyAC4AMgAzADYAOAA0AAAAAABGAA8AAQBBAHMAcwBlAG0AYgBsAHkAIABW
-AGUAcgBzAGkAbwBuAAAAMQAuADAALgA5ADYANgAyAC4AMgAzADYAOAA0AAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAIwwAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAABAPwAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -849,7 +819,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </ScriptProject>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -880,9 +850,9 @@ Go
 ALTER DATABASE Diamond360_RawData SET SINGLE_USER WITH ROLLBACK IMMEDIATE
 
 RESTORE DATABASE Diamond360_RawData
-FROM DISK = '\\\\SUNVWIN360DB02\\amc\\D360Backups\\Diamond360_RawData_Backup.bak' WITH FILE = 1, 
+FROM DISK = '\\\\10.9.51.101\\Backup\\Diamond360_RawData_Backup.bak' WITH FILE = 1, 
 MOVE 'Diamond360_RawData' TO '" + @[User::Diamond360_RawDataDataDrive]  + "\\Data\\" +  @[User::Diamond360_RawDataFileName] + ".mdf',
-MOVE 'Diamond360_RawData_Log' TO '" + @[User::Diamond360_RawDataLogDrive]  + "\\Log\\" + @[User::Diamond360_RawDataFileName] +  ".ldf' ,
+MOVE 'Diamond360_RawData_Log' TO '" + @[User::Diamond360_RawDataLogDrive]  + "\\Data\\" + @[User::Diamond360_RawDataFileName] +  ".ldf' ,
 NOUNLOAD, REPLACE
 
 ALTER DATABASE Diamond360_RawData SET MULTI_USER
@@ -890,7 +860,7 @@ GO"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{6A28F843-5278-4C1F-8C4B-8F07991906F5}"
-              SQLTask:SqlStatementSource="Use master&#xA;Go&#xA;ALTER DATABASE Diamond360_RawData SET SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;&#xA;RESTORE DATABASE Diamond360_RawData&#xA;FROM DISK = '\\SUNVWIN360DB02\amc\D360Backups\Diamond360_RawData_Backup.bak' WITH FILE = 1, &#xA;MOVE 'Diamond360_RawData' TO 'F:\Data\.mdf',&#xA;MOVE 'Diamond360_RawData_Log' TO 'F:\Log\.ldf' ,&#xA;NOUNLOAD, REPLACE&#xA;&#xA;ALTER DATABASE Diamond360_RawData SET MULTI_USER&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="Use master&#xA;Go&#xA;ALTER DATABASE Diamond360_RawData SET SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;&#xA;RESTORE DATABASE Diamond360_RawData&#xA;FROM DISK = '\\10.9.51.101\Backup\Diamond360_RawData_Backup.bak' WITH FILE = 1, &#xA;MOVE 'Diamond360_RawData' TO 'F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL\Data\.mdf',&#xA;MOVE 'Diamond360_RawData_Log' TO 'F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL\Data\.ldf' ,&#xA;NOUNLOAD, REPLACE&#xA;&#xA;ALTER DATABASE Diamond360_RawData SET MULTI_USER&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -922,6 +892,15 @@ GO"</DTS:PropertyExpression>
               VSTAMinorVersion="0"
               Language="CSharp"
               ReadOnlyVariables="User::smtpPassword,User::smtpServer,User::smtpUserName">
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1128,35 +1107,6 @@ GO"</DTS:PropertyExpression>
   </ProjectExtensions>
 </Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties.Settings.get_Default():ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties.Sett" +
-    "ings")]
-
-namespace ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Namespaces
 using System;
@@ -1305,6 +1255,35 @@ namespace ST_b3024ac85bcc4c98814bb21e6257a9fb
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties.Settings.get_Default():ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties.Sett" +
+    "ings")]
+
+namespace ST_b3024ac85bcc4c98814bb21e6257a9fb.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -1334,15 +1313,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------

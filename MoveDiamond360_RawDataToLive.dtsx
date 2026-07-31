@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MoveDiamond360_RawDataToLive"
   DTS:PackageType="5"
-  DTS:VersionBuild="116"
-  DTS:VersionGUID="{A9A414CA-5D48-4A3E-8333-90F8070CFE06}">
+  DTS:VersionBuild="117"
+  DTS:VersionGUID="{983E8BCF-323E-472D-A4A6-849BD2F46D65}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -81,14 +81,35 @@
           Language="CSharp"
           ReadWriteVariables="User::Diamond360_RawDataFileName">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -461,35 +482,14 @@ namespace ST_32975033dfce48a1b108b37671d69815.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -702,14 +702,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="SqlStatementSource">"RESTORE DATABASE Diamond360_RawData_New 
-FROM DISK = '\\\\SUNVWIN360DB02\\amc\\D360Backups\\Diamond360_RawData_Backup.bak' 
+FROM DISK = '\\\\10.9.51.101\\Backup\\Diamond360_RawData_Backup.bak' 
 WITH MOVE 'Diamond360_RawData' TO '" + @[User::Diamond360_RawDataDataDrive]  + ":\\Data\\" +  @[User::Diamond360_RawDataFileName] + ".mdf',
 MOVE 'Diamond360_RawData_Log' TO '" + @[User::Diamond360_RawDataLogDrive]  + ":\\LDF\\" + @[User::Diamond360_RawDataFileName] +  ".ldf' 
 GO"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{114B834E-92AF-4EEB-80E9-37E0FF6EE91E}"
-              SQLTask:SqlStatementSource="RESTORE DATABASE Diamond360_RawData_New &#xA;FROM DISK = '\\SUNVWIN360DB02\amc\D360Backups\Diamond360_RawData_Backup.bak' &#xA;WITH MOVE 'Diamond360_RawData' TO 'H:\Data\.mdf',&#xA;MOVE 'Diamond360_RawData_Log' TO 'L:\LDF\.ldf' &#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="RESTORE DATABASE Diamond360_RawData_New &#xA;FROM DISK = '\\10.9.51.101\Backup\Diamond360_RawData_Backup.bak' &#xA;WITH MOVE 'Diamond360_RawData' TO 'H:\Data\.mdf',&#xA;MOVE 'Diamond360_RawData_Log' TO 'L:\LDF\.ldf' &#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>

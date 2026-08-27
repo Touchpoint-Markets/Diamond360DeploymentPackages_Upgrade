@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MoveGroupInsuranceExportsToQA"
   DTS:PackageType="5"
-  DTS:VersionBuild="163"
-  DTS:VersionGUID="{01972B6B-1892-48BD-96C4-D4BF4D02D0C5}">
+  DTS:VersionBuild="167"
+  DTS:VersionGUID="{303A0CDD-5633-4ABE-8335-3791A47141F8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYDO1NpQJ40OaOhCTZzB6BAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABpbGxKg+85GvVSNORxZDF3HqMqvXlfFU2tNgZcdva13gAAAAAOgAAAAAIAACAAAAAXJZiI13cv69A5AvrQ9cxn2C0L6rq2W8e9QaENubfaHCAAAAAIPq5J1AR6ZAqiyTXbOGX9BbhzyzTQXbuKL+fCib/z9EAAAABXJ/DmcH6gEFlBZEAuF39Amq/CeVH5KmOqyFJaaIfAz1gPTLeKIrcRV2n/MO9ahFBedgDyZpkiO7E4dbQtQbQg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYDO1NpQJ40OaOhCTZzB6BAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACLFaNcVxoiRZpdBSsQo+jpMrN4Ax2F4WcELSurnW1PXwAAAAAOgAAAAAIAACAAAADPLeQXtpQ2x/1lv+l2C3q5R1+OBdCMlRoLUYD9RubRhCAAAAA5EFvoY7Cb5G37KjzcdFaQh9w9h5edl8FBl5b8SnhhPkAAAABGAscwdssnyVWkUSu2f6FjPhZXGdMa5d8gwRSrB4x6EFJmYgG7dPD9yFkRm5N6kN0Bi3Ic3xr6ezuama25FHAp</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -50,7 +50,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ExportsDataDrive">
       <DTS:VariableValue
-        DTS:DataType="8">F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL</DTS:VariableValue>
+        DTS:DataType="8">E:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -194,14 +194,35 @@
           Language="CSharp"
           ReadWriteVariables="User::ExportsFileName">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -573,35 +594,14 @@ namespace ST_32975033dfce48a1b108b37671d69815.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -828,7 +828,7 @@ GO"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{6A28F843-5278-4C1F-8C4B-8F07991906F5}"
-              SQLTask:SqlStatementSource="Use master&#xA;Go&#xA;ALTER DATABASE GroupInsuranceExports SET SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;&#xA;RESTORE DATABASE GroupInsuranceExports&#xA;FROM DISK = '\\10.9.51.101\Backup\GroupInsuranceExports.bak' &#xA;WITH FILE = 1, MOVE 'GroupInsuranceExports' TO 'F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL\Data\.mdf',&#xA;MOVE 'GroupInsuranceExports_Log' TO 'F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL\Data\.ldf' ,&#xA;NOUNLOAD, REPLACE&#xA;&#xA;ALTER DATABASE GroupInsuranceExports SET MULTI_USER&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="Use master&#xA;Go&#xA;ALTER DATABASE GroupInsuranceExports SET SINGLE_USER WITH ROLLBACK IMMEDIATE&#xA;&#xA;RESTORE DATABASE GroupInsuranceExports&#xA;FROM DISK = '\\10.9.51.101\Backup\GroupInsuranceExports.bak' &#xA;WITH FILE = 1, MOVE 'GroupInsuranceExports' TO 'E:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL\Data\.mdf',&#xA;MOVE 'GroupInsuranceExports_Log' TO 'F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL\Data\.ldf' ,&#xA;NOUNLOAD, REPLACE&#xA;&#xA;ALTER DATABASE GroupInsuranceExports SET MULTI_USER&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -873,15 +873,15 @@ GO"</DTS:PropertyExpression>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="227.2,41.6"
+          Size="227,42"
           Id="Package\Create New Backups\Backup GroupInsuranceExports"
           TopLeft="5.50000000000003,208.7" />
         <NodeLayout
-          Size="184.8,41.6"
+          Size="185,42"
           Id="Package\Create New Backups\Database Optimization"
           TopLeft="26.7,107.1" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\Create New Backups\Shrink Files"
           TopLeft="52.7,5.49999999999995" />
         <EdgeLayout
@@ -931,27 +931,27 @@ GO"</DTS:PropertyExpression>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="238.4,305.6"
-          Size="238.4,348.8"
+          PanelSize="238,306"
+          Size="238,349"
           Id="Package\Create New Backups"
           TopLeft="75.1,107.1" />
         <NodeLayout
-          Size="277.6,41.6"
+          Size="278,42"
           Id="Package\Delete Old GroupInsuranceExports Backup"
           TopLeft="55.5,5.49999999999995" />
         <NodeLayout
-          Size="377.6,41.6"
+          Size="378,42"
           Id="Package\Get Current Date Time To Tack Onto End Of MDF And LDF Files"
           TopLeft="5.50000000000006,515.9" />
         <NodeLayout
-          Size="263.2,41.6"
+          Size="263,42"
           Id="Package\Restore Backups\Restore GroupInsuranceExports On QA"
           TopLeft="5.5,5.50000000000007" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="274.4,102.4"
-          Size="274.4,145.6"
+          PanelSize="274,103"
+          Size="274,146"
           Id="Package\Restore Backups"
           TopLeft="57.1000000000001,617.5" />
         <EdgeLayout

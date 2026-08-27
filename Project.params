@@ -1,51 +1,87 @@
 <?xml version="1.0"?>
 <SSIS:Parameters xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
-  <SSIS:Parameter SSIS:Name="EmailFromAddress">
+  <SSIS:Parameter
+    SSIS:Name="EmailFromAddress">
     <SSIS:Properties>
-      <SSIS:Property SSIS:Name="ID">{A3F1C2D4-6B8E-4A0C-9F1D-2E3B4C5D6E7F}</SSIS:Property>
-      <SSIS:Property SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property SSIS:Name="Description"></SSIS:Property>
-      <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Value">Diamond360DataCycle@arc-network.com</SSIS:Property>
-      <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="ID">{A3F1C2D4-6B8E-4A0C-9F1D-2E3B4C5D6E7F}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">Diamond360DataCycle@arc-network.com</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
   </SSIS:Parameter>
-  <SSIS:Parameter SSIS:Name="SmtpServer">
+  <SSIS:Parameter
+    SSIS:Name="SmtpServer">
     <SSIS:Properties>
-      <SSIS:Property SSIS:Name="ID">{B4E2D3A5-7C9F-4B1D-8A2E-3F4C5D6E7F8A}</SSIS:Property>
-      <SSIS:Property SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property SSIS:Name="Description"></SSIS:Property>
-      <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Value">email-smtp.us-east-1.amazonaws.com</SSIS:Property>
-      <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="ID">{B4E2D3A5-7C9F-4B1D-8A2E-3F4C5D6E7F8A}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">email-smtp.us-east-1.amazonaws.com</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
   </SSIS:Parameter>
-  <SSIS:Parameter SSIS:Name="SmtpUserName">
+  <SSIS:Parameter
+    SSIS:Name="SmtpUserName">
     <SSIS:Properties>
-      <SSIS:Property SSIS:Name="ID">{C5F3E4B6-8D0A-4C2E-9B3F-4A5D6E7F8A9B}</SSIS:Property>
-      <SSIS:Property SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property SSIS:Name="Description"></SSIS:Property>
-      <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Value">AKIATN243CRFBHMORL2Z</SSIS:Property>
-      <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="ID">{C5F3E4B6-8D0A-4C2E-9B3F-4A5D6E7F8A9B}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">AKIATN243CRFBRHH3H6E</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
   </SSIS:Parameter>
-  <SSIS:Parameter SSIS:Name="SmtpPassword">
+  <SSIS:Parameter
+    SSIS:Name="SmtpPassword">
     <SSIS:Properties>
-      <SSIS:Property SSIS:Name="ID">{D6A4F5C7-9E1B-4D3F-8C4A-5B6E7F8A9B0C}</SSIS:Property>
-      <SSIS:Property SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property SSIS:Name="Description"></SSIS:Property>
-      <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property SSIS:Name="Value">BEcxqOl7fX6+EMuNoUtoCEMtrDDwmd/zg2GIsUD4aUzM</SSIS:Property>
-      <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="ID">{D6A4F5C7-9E1B-4D3F-8C4A-5B6E7F8A9B0C}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">BMVm2kBbT6kA0MZrYpg07Oa6pwL/b5RcW8IMEUVk2f7t</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
   </SSIS:Parameter>
 </SSIS:Parameters>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DeployDataCycleDatabases"
   DTS:PackageType="5"
-  DTS:VersionBuild="156"
-  DTS:VersionGUID="{8EC75CA2-742E-4F3B-825C-B9C9C2D6BFA6}">
+  DTS:VersionBuild="161"
+  DTS:VersionGUID="{3D67BDC1-C7B3-4C07-8A93-4E9505AF980E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -278,13 +278,169 @@
       </DTS:Executables>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Load EINFinder API Data"
+      DTS:refId="Package\Insert EINFinder API Data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{e437fee2-9a88-4df5-82f5-542f9b590895}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert EINFinder API Data"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,24,ExecuteSQLExecutingQuery</DTS:Property>
+        <DTS:Property
+          DTS:EventName="ExecuteSQLExecutingQuery"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnError"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnPostExecute"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+      </DTS:LoggingOptions>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EB5CF017-7B2D-4036-9DCF-D17FA04D16E9}"
+          SQLTask:SqlStatementSource="USE Diamond360&#xA;&#xA;EXEC dbo.EINFinder_INSERT_GIBASIC;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFinder_INSERT_GIPROPRIETARY;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFinder_INSERT_GISCHEDULES;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFinder_INSERT_RPPBASIC;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFinder_INSERT_RPPPROPRIETARY;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;&#xA;&#xA;EXEC dbo.EINFinder_INSERT_RPPSCHEDULES;&#xA;&#xA;CHECKPOINT;&#xA;DBCC FREESYSTEMCACHE ('ALL');&#xA;DBCC FREEPROCCACHE;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert SGH Data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9381b00b-260f-46fb-8009-6a9792ee50d5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert SGH Data"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,24,ExecuteSQLExecutingQuery</DTS:Property>
+        <DTS:Property
+          DTS:EventName="ExecuteSQLExecutingQuery"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnError"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnPostExecute"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+      </DTS:LoggingOptions>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EB5CF017-7B2D-4036-9DCF-D17FA04D16E9}"
+          SQLTask:SqlStatementSource="USE Diamond360&#xA;EXEC [dbo].[Generate_SGH_Data]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Move EINFinder API Data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{deb9f154-80d6-4fca-b04f-c8948dca3df2}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load EINFinder API Data"
+      DTS:ObjectName="Move EINFinder API Data"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -313,6 +469,84 @@
           SQLTask:SqlStatementSource="USE Prospector&#xA;GO&#xA;ALTER DATABASE Prospector SET TRUSTWORTHY ON;&#xA;GO&#xA;USE Prospector&#xA;GO&#xA;EXEC sp_changedbowner 'sa'&#xA;GO&#xA;&#xA;&#xA;USE ProspectorExports&#xA;GO&#xA;ALTER DATABASE ProspectorExports SET TRUSTWORTHY ON;&#xA;GO&#xA;USE ProspectorExports&#xA;GO&#xA;EXEC sp_changedbowner 'sa'&#xA;GO&#xA;&#xA;&#xA;USE GroupInsurance&#xA;GO&#xA;ALTER DATABASE GroupInsurance SET TRUSTWORTHY ON;&#xA;GO&#xA;USE GroupInsurance&#xA;GO&#xA;EXEC sp_changedbowner 'sa'&#xA;GO&#xA;&#xA;&#xA;USE GroupInsuranceExports&#xA;GO&#xA;ALTER DATABASE GroupInsuranceExports SET TRUSTWORTHY ON;&#xA;GO&#xA;USE GroupInsuranceExports&#xA;GO&#xA;EXEC sp_changedbowner 'sa'&#xA;GO&#xA;&#xA;&#xA;USE Diamond360&#xA;GO&#xA;ALTER DATABASE Diamond360 SET TRUSTWORTHY ON;&#xA;GO&#xA;USE Diamond360&#xA;GO&#xA;EXEC sp_changedbowner 'sa'&#xA;GO&#xA;&#xA;&#xA;USE ExportLogging&#xA;GO&#xA;ALTER DATABASE ExportLogging SET TRUSTWORTHY ON;&#xA;GO&#xA;USE ExportLogging&#xA;GO&#xA;EXEC sp_changedbowner 'sa'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update SGH Data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{f7881c34-0f8d-4fd2-bd41-e56e3da79058}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update SGH Data"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,24,ExecuteSQLExecutingQuery</DTS:Property>
+        <DTS:Property
+          DTS:EventName="ExecuteSQLExecutingQuery"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnError"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnPostExecute"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+      </DTS:LoggingOptions>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A28F843-5278-4C1F-8C4B-8F07991906F5}"
+          SQLTask:SqlStatementSource="USE SmallGroupHealth&#xA;EXEC [dbo].[UpdateSGHData]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -324,13 +558,37 @@
       DTS:ObjectName="Constraint"
       DTS:To="Package\SET TRUSTWORTHY QA" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{E45CEABC-C399-4291-82C3-3D0FCEDB5E19}"
+      DTS:DTSID="{599641ED-5EF8-4F4F-832A-E541953F6908}"
       DTS:From="Package\SET TRUSTWORTHY QA"
       DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Insert SGH Data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{32B34119-F924-4975-937B-3E185E13F9EC}"
+      DTS:From="Package\Insert SGH Data"
+      DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Load EINFinder API Data" />
+      DTS:To="Package\Update SGH Data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{3585D4AE-D5BA-4A3A-894D-C486BE22FA44}"
+      DTS:From="Package\Update SGH Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Insert EINFinder API Data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{4EE734B9-3077-403E-B869-D36B891E0F3B}"
+      DTS:From="Package\Insert EINFinder API Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Move EINFinder API Data" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
@@ -369,6 +627,15 @@
               VSTAMinorVersion="0"
               Language="CSharp"
               ReadOnlyVariables="System::PackageName, System::SourceName, System::SourceDescription, System::ErrorDescription, System::ErrorCode, $Project::SmtpServer, $Project::SmtpUserName, $Project::SmtpPassword, $Project::EmailFromAddress, $Project::sendEmailFlag">
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -575,35 +842,6 @@
   </ProjectExtensions>
 </Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties.Settings.get_Default():ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties.Sett" +
-    "ings")]
-
-namespace ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Namespaces
 using System;
@@ -694,6 +932,35 @@ namespace ST_d1dcc50421ce46b99a9df5840ebc69a9
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties.Settings.get_Default():ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties.Sett" +
+    "ings")]
+
+namespace ST_d1dcc50421ce46b99a9df5840ebc69a9.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -723,15 +990,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -966,25 +1224,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <NodeLayout
           Size="195,42"
           Id="Package\Deployment Container\FreeERISA Databases\Diamond360_RawData\Deploy to Live (As _New)"
-          TopLeft="5.50000000000001,107.1" />
+          TopLeft="5.50000000000001,107.5" />
         <NodeLayout
           Size="140,42"
           Id="Package\Deployment Container\FreeERISA Databases\Diamond360_RawData\Deploy to QA"
-          TopLeft="33.1,5.49999999999995" />
+          TopLeft="33,5.5" />
         <EdgeLayout
           Id="Package\Deployment Container\FreeERISA Databases\Diamond360_RawData.PrecedenceConstraints[Constraint]"
-          TopLeft="103.1,47.1">
+          TopLeft="103,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -996,39 +1254,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="210,204"
-          Size="210,247"
+          PanelSize="206,204"
+          Size="206,248"
           Id="Package\Deployment Container\FreeERISA Databases\Diamond360_RawData"
-          TopLeft="7.166666575604,5.50000000000003" />
+          TopLeft="5.50000000000004,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="221,308"
-          Size="221,351"
+          PanelSize="217,308"
+          Size="217,352"
           Id="Package\Deployment Container\FreeERISA Databases"
-          TopLeft="5.50000000000007,5.50000000000003" />
+          TopLeft="5.5,5.5" />
         <NodeLayout
           Size="195,42"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\Diamond360\Deploy to Live (As _New)"
-          TopLeft="5.50000000000001,107.1" />
+          TopLeft="5.50000000000001,107.5" />
         <NodeLayout
           Size="140,42"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\Diamond360\Deploy to QA"
-          TopLeft="33.1,5.49999999999995" />
+          TopLeft="33,5.5" />
         <EdgeLayout
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\Diamond360.PrecedenceConstraints[Constraint]"
-          TopLeft="103.1,47.1">
+          TopLeft="103,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1041,31 +1299,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="206,204"
-          Size="206,247"
+          Size="206,248"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\Diamond360"
-          TopLeft="5.50000000000004,5.50000000000003" />
+          TopLeft="5.5,5.5" />
         <NodeLayout
           Size="195,42"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\GroupInsuranceExports\Deploy to Live (As _New)"
-          TopLeft="5.50000000000001,107.1" />
+          TopLeft="5.50000000000001,107.5" />
         <NodeLayout
           Size="140,42"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\GroupInsuranceExports\Deploy to QA"
-          TopLeft="33.1,5.49999999999995" />
+          TopLeft="33,5.5" />
         <EdgeLayout
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\GroupInsuranceExports.PrecedenceConstraints[Constraint]"
-          TopLeft="103.1,47.1">
+          TopLeft="103,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1078,31 +1336,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="206,204"
-          Size="206,247"
+          Size="206,248"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\GroupInsuranceExports"
-          TopLeft="272.5,5.49999999999991" />
+          TopLeft="272.5,5.49999999999989" />
         <NodeLayout
           Size="195,42"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\ProspectorExports\Deploy to Live (As _New)"
-          TopLeft="5.50000000000001,107.1" />
+          TopLeft="5.50000000000001,107.5" />
         <NodeLayout
           Size="140,42"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\ProspectorExports\Deploy to QA"
-          TopLeft="33.1,5.49999999999995" />
+          TopLeft="33,5.5" />
         <EdgeLayout
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\ProspectorExports.PrecedenceConstraints[Constraint]"
-          TopLeft="103.1,47.1">
+          TopLeft="103,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1115,34 +1373,112 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="206,204"
-          Size="206,247"
+          Size="206,248"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases\ProspectorExports"
-          TopLeft="539.5,5.49999999999991" />
+          TopLeft="539.5,5.49999999999989" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="751,308"
-          Size="751,351"
+          Size="751,352"
           Id="Package\Deployment Container\Prospector and Group Insurance Databases"
-          TopLeft="283.7,5.49999999999991" />
+          TopLeft="283.5,5.49999999999989" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="1040,412"
-          Size="1040,455"
+          Size="1040,456"
           Id="Package\Deployment Container"
-          TopLeft="5.5,5.50000000000003" />
+          TopLeft="5.50000000000011,5.5" />
         <NodeLayout
-          Size="195,42"
-          Id="Package\Load EINFinder API Data"
-          TopLeft="427.9,622.3" />
+          Size="205,42"
+          Id="Package\Move EINFinder API Data"
+          TopLeft="428,929.5" />
         <NodeLayout
-          Size="200,42"
+          Size="208,42"
           Id="Package\SET TRUSTWORTHY QA"
-          TopLeft="425.5,520.7" />
+          TopLeft="425.5,521.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="525.5,460.7">
+          TopLeft="527.5,461.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Insert SGH Data"
+          TopLeft="446,623.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="527.5,563.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Update SGH Data"
+          TopLeft="442,725.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="525.5,665.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Insert EINFinder API Data"
+          TopLeft="422.5,827.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="525.5,767.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1163,19 +1499,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="525.5,562.3">
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="528,869.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

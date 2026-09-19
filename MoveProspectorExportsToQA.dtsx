@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MoveProspectorExportsToQA"
   DTS:PackageType="5"
-  DTS:VersionBuild="141"
-  DTS:VersionGUID="{199A3756-D312-4413-8350-C4E8C9900E7D}">
+  DTS:VersionBuild="142"
+  DTS:VersionGUID="{125477AA-92B7-4BE4-BA6B-9C5004F0CEE2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYDO1NpQJ40OaOhCTZzB6BAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC4voQpRTaGXYQ3uYTQ9luKV/rEzvUXVZ+XCq8lo6JdbAAAAAAOgAAAAAIAACAAAABrt7PdXqi/PtpWOmeM6erV1wak/K1hukPxtz2rpEHpviAAAACmqDuM8MVJa4gLEE10B18YF3LZYeNrotJOK67xdbu8RkAAAADD4swERkj0TxI3kTwvdTGPMpkllLeLPhNCot54H9jeBfCxTEAU4YCetdTx2bLGdbatKj3ixZ5mSxFoiX9G8576</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYDO1NpQJ40OaOhCTZzB6BAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAArffjFZmkR7G4RfCjqwLwNje4/UziW/eCc6bXCw9wLOQAAAAAOgAAAAAIAACAAAAAT5FhQ48q2VXtlechqhVdaMeliL0ioi4gAn5/6Nnjo2CAAAADAlUwxGYtMa6ybip8JEhyd6acbUvcpUbuI1a+NWsWpzUAAAABkgY5IkZJ9Kup+8Ot7WhfGOOV79AHPMc5rgLQB+bmxqu4leLowckHT1IEmbDEYdDeimLuWbEtgevcApQHIa+Bh</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,6 +42,18 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="CINPSQL20"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -72,6 +84,53 @@
         DTS:DataType="8">F:\Program Files\Microsoft SQL Server\MSSQL15.CINVSQL24\MSSQL</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">2,7,OnError,13,OnPostExecute</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Create New Backups"
@@ -82,6 +141,53 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Create New Backups">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">2,7,OnError,13,OnPostExecute</DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnError"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnPostExecute"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:SelectedLogProviders>
+          <DTS:SelectedLogProvider
+            DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+        </DTS:SelectedLogProviders>
+      </DTS:LoggingOptions>
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Create New Backups\Backup ProspectorExports"
@@ -94,6 +200,71 @@
           DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:ThreadHint="0">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1">
+            <DTS:Property
+              DTS:DataType="8"
+              DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,24,ExecuteSQLExecutingQuery</DTS:Property>
+            <DTS:Property
+              DTS:EventName="ExecuteSQLExecutingQuery"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnError"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnPostExecute"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:SelectedLogProviders>
+              <DTS:SelectedLogProvider
+                DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+            </DTS:SelectedLogProviders>
+          </DTS:LoggingOptions>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{2E9DF9ED-F5BA-4BC1-845D-C201C413FEFD}"
@@ -116,6 +287,71 @@
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:ThreadHint="0">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1">
+            <DTS:Property
+              DTS:DataType="8"
+              DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,24,ExecuteSQLExecutingQuery</DTS:Property>
+            <DTS:Property
+              DTS:EventName="ExecuteSQLExecutingQuery"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnError"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnPostExecute"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:SelectedLogProviders>
+              <DTS:SelectedLogProvider
+                DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+            </DTS:SelectedLogProviders>
+          </DTS:LoggingOptions>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{29434133-E10C-4F9F-A0B6-12289B660701}"
@@ -133,6 +369,71 @@
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:ThreadHint="0">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1">
+            <DTS:Property
+              DTS:DataType="8"
+              DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,24,ExecuteSQLExecutingQuery</DTS:Property>
+            <DTS:Property
+              DTS:EventName="ExecuteSQLExecutingQuery"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnError"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnPostExecute"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:SelectedLogProviders>
+              <DTS:SelectedLogProvider
+                DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+            </DTS:SelectedLogProviders>
+          </DTS:LoggingOptions>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EB5CF017-7B2D-4036-9DCF-D17FA04D16E9}"
@@ -170,6 +471,71 @@
       DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,19,FileSystemOperation</DTS:Property>
+        <DTS:Property
+          DTS:EventName="FileSystemOperation"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnError"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnPostExecute"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:SelectedLogProviders>
+          <DTS:SelectedLogProvider
+            DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+        </DTS:SelectedLogProviders>
+      </DTS:LoggingOptions>
       <DTS:ObjectData>
         <FileSystemData
           TaskOperationType="DeleteFile"
@@ -186,6 +552,71 @@
       DTS:ObjectName="Get Current Date Time To Tack Onto End Of MDF And LDF Files"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,18,ScriptTaskLogEntry</DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnError"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnPostExecute"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="ScriptTaskLogEntry"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:SelectedLogProviders>
+          <DTS:SelectedLogProvider
+            DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+        </DTS:SelectedLogProviders>
+      </DTS:LoggingOptions>
       <DTS:ObjectData>
         <ScriptProject
           Name="ST_32975033dfce48a1b108b37671d69815"
@@ -194,14 +625,35 @@
           Language="CSharp"
           ReadWriteVariables="User::ExportsFileName">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -573,35 +1025,14 @@ namespace ST_32975033dfce48a1b108b37671d69815.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_32975033dfce48a1b108b37671d69815")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -800,6 +1231,53 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:LocaleID="-1"
       DTS:ObjectName="Restore Backups">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">2,7,OnError,13,OnPostExecute</DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnError"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnPostExecute"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:SelectedLogProviders>
+          <DTS:SelectedLogProvider
+            DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+        </DTS:SelectedLogProviders>
+      </DTS:LoggingOptions>
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Restore Backups\Restore ProspectorExports On QA"
@@ -812,6 +1290,71 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:ThreadHint="0">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1">
+            <DTS:Property
+              DTS:DataType="8"
+              DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,24,ExecuteSQLExecutingQuery</DTS:Property>
+            <DTS:Property
+              DTS:EventName="ExecuteSQLExecutingQuery"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnError"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnPostExecute"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:SelectedLogProviders>
+              <DTS:SelectedLogProvider
+                DTS:InstanceID="{A5849DE7-3566-4263-B66D-89CDFF63D23B}" />
+            </DTS:SelectedLogProviders>
+          </DTS:LoggingOptions>
           <DTS:PropertyExpression
             DTS:Name="SqlStatementSource">"Use master
 Go
@@ -873,15 +1416,15 @@ GO"</DTS:PropertyExpression>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="201.6,41.6"
+          Size="202,42"
           Id="Package\Create New Backups\Backup ProspectorExports"
           TopLeft="5.50000000000003,208.7" />
         <NodeLayout
-          Size="184.8,41.6"
+          Size="185,42"
           Id="Package\Create New Backups\Database Optimization"
           TopLeft="13.9,107.1" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\Create New Backups\Shrink Files"
           TopLeft="39.9,5.49999999999995" />
         <EdgeLayout
@@ -931,27 +1474,27 @@ GO"</DTS:PropertyExpression>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="212.8,305.6"
-          Size="212.8,348.8"
+          PanelSize="213,306"
+          Size="213,349"
           Id="Package\Create New Backups"
           TopLeft="87.9,107.1" />
         <NodeLayout
-          Size="253.6,41.6"
+          Size="254,42"
           Id="Package\Delete Old ProspectorExports Backup"
           TopLeft="67.5,5.49999999999995" />
         <NodeLayout
-          Size="377.6,41.6"
+          Size="378,42"
           Id="Package\Get Current Date Time To Tack Onto End Of MDF And LDF Files"
           TopLeft="5.50000000000006,515.9" />
         <NodeLayout
-          Size="244.8,41.6"
+          Size="245,42"
           Id="Package\Restore Backups\Restore ProspectorExports On QA"
           TopLeft="5.5,5.50000000000007" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="256,102.4"
-          Size="256,145.6"
+          PanelSize="256,103"
+          Size="256,146"
           Id="Package\Restore Backups"
           TopLeft="66.3000000000001,617.5" />
         <EdgeLayout
